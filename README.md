@@ -94,6 +94,6 @@ Após a compilação bem-sucedida, o arquivo `main.pdf` será gerado no diretór
 
 ---
 
-**Instituição:** [UTFPR - Universidade Tecnologica Federal do Paraná](www.utfpr.edu.br)
-**Curso:** [TSI - Tecnologia em sistemas para internet](https://tsi.td.utfpr.edu.br/)
-**Ano:** 2025
+- **Instituição:** [UTFPR - Universidade Tecnologica Federal do Paraná](www.utfpr.edu.br)
+- **Curso:** [TSI - Tecnologia em sistemas para internet](https://tsi.td.utfpr.edu.br/)
+- **Ano:** 2025
