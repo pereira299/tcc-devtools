@@ -90,7 +90,7 @@ Após a compilação bem-sucedida, o arquivo `main.pdf` será gerado no diretór
 
 ### 🎓 Orientador
 
-* **Prof. Ms. Eduardo B. Pezzuti**
+* **Prof. Ms. Eduardo Pezutti B. dos Santos**
 
 ---
 
