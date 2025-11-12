@@ -2,6 +2,13 @@
 O navegador Google Chrome integra um conjunto de ferramentas de desenvolvimento web, conhecido como Chrome DevTools. Esta suíte é projetada para instrumentar, inspecionar, depurar e criar perfis de aplicações web diretamente no navegador. As ferramentas fornecem funcionalidades para uma variedade de tarefas, incluindo a manipulação do DOM, alteração de CSS, análise de desempenho de carregamento de página e monitoramento de solicitações de rede. A seção subsequente apresenta uma análise detalhada dos painéis que compõem este conjunto, elucidando as capacidades e finalidades específicas de cada ferramenta.
 
 \subsection{Elementos}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-elements.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 A ferramenta "Elementos" (Elements) constitui uma ferramenta 
 robusta para a inspeção e manipulação em tempo real do Document Object Model
 (DOM). Ele renderiza a estrutura da página em uma árvore DOM hierárquica, permitindo
@@ -9,88 +16,284 @@ a seleção precisa e a modificação direta de nós. As funcionalidades de edi�
 
 Além da manipulação estrutural, esta ferramenta é central para a análise e depuração de CSS. A sub-aba "Estilos" (Styles) exibe o conjunto de regras CSS aplicadas a um nó selecionado, detalhando a cascata e identificando propriedades substituídas, inválidas ou inativas. De forma complementar, a aba "Computado" (Computed) lista os valores de propriedade finais resolvidos pelo motor de renderização do navegador. A ferramenta agrega ainda ferramentas especializadas para a depuração de layouts complexos, como Grid e Flexbox (aba "Layout"), a inspeção de "Listeners de Evento" e a análise da árvore de "Acessibilidade".
 \subsection{Console}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-console.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Console" (Console) atua como uma interface primária para o diagnóstico e interação com aplicações web, servindo a duas funções principais: a visualização de mensagens registradas e a execução de JavaScript. Desenvolvedores utilizam a API do Console, através de métodos como `console.log()`, `console.assert()` e `console.table()`, para enviar mensagens de diagnóstico durante a execução do código. Este mecanismo de *logging* é fundamental para verificar a ordem de execução e inspecionar os valores das variáveis em pontos específicos, facilitando a depuração e a análise do comportamento do script.
 
 Adicionalmente, o Console funciona como um ambiente REPL (Read-Eval-Print Loop), permitindo a execução interativa de código JavaScript no contexto da página inspecionada. Por possuir acesso total ao objeto `window` da página, os desenvolvedores podem utilizá-lo para interagir programaticamente com o DOM, modificar dinamicamente o conteúdo da página ou testar novas funcionalidades isoladamente. A ferramenta também disponibiliza um conjunto de funções utilitárias, como `debug(função)`, que facilitam a inspeção da página e a depuração ao pausar a execução do código em pontos específicos.
 \subsection{Lighthouse}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-lighthouse.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 Esta ferramenta é projetada para realizar auditorias abrangentes da qualidade de aplicações web. Sua principal função é gerar um relatório detalhado que avalia o site em diversas categorias fundamentais, incluindo Desempenho (Performance), Acessibilidade, Práticas Recomendadas e SEO. A ferramenta permite a configuração do ambiente de teste, como a emulação de dispositivos móveis , a seleção de modos de análise (por exemplo, "Navegação" para um único carregamento de página) e a simulação de condições de rede (limitação simulada). A execução de uma auditoria estabelece um referencial (baseline) quantitativo, essencial para medir o impacto de otimizações subsequentes, e fornece recomendações práticas sobre as mudanças que podem gerar maior impacto na performance.
 
 O relatório resultante da auditoria apresenta uma pontuação de desempenho geral e detalha métricas quantitativas cruciais, como First Contentful Paint (Primeira Exibição de Conteúdo) e Time To Interactive (Tempo para Interatividade).
 \subsection{Memória}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-memory.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Memória" (Memory) fornece um conjunto de ferramentas de diagnóstico para a análise do uso da memória em aplicações web. Ele é projetado para identificar problemas como vazamentos de memória (memory leaks) , inchaço de memória (memory bloat) e coletas de lixo (garbage collections) frequentes. A ferramenta oferece quatro tipos de perfis de captura: "Instantâneo de alocação heap" (Heap snapshot), que exibe a distribuição de memória entre objetos JavaScript e nós DOM; "Instrumentação de alocação na linha do tempo" (Allocation instrumentation on timeline), que monitora alocações ao longo do tempo para isolar vazamentos; "Amostragem de alocação" (Allocation sampling), um método de baixo overhead que registra alocações de memória por pilha de execução JavaScript ; e "Elementos separados" (Detached elements), que identifica objetos retidos por referências JavaScript. A análise dos snapshots de heap permite a identificação de nós DOM separados (detached DOM nodes), uma causa comum de vazamentos de memória.
 
 \subsection{Rede}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-network.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Rede" (Network) é uma ferramenta de diagnóstico utilizada para monitorar e analisar a atividade de rede de uma aplicação web, registrando todas as solicitações de recursos (requests) e suas respectivas respostas (responses) em um log cronológico. Sua finalidade primária é a verificação da transferência de recursos e a inspeção das propriedades de solicitações individuais. A seleção de um recurso específico permite uma análise detalhada através de sub-abas, que expõem os cabeçalhos HTTP (Headers) , o conteúdo da resposta (Response) , a cadeia de causa da solicitação (Initiator) e um detalhamento temporal da atividade de rede (Timing). A ferramenta também permite a exportação dos dados de atividade de rede em formato HAR (HTTP Archive).
 
 \subsection{Desempenho}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-performance.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Desempenho" (Performance) é uma ferramenta de diagnóstico avançada projetada para gravar e analisar perfis de desempenho da CPU em aplicações web. Ele permite a captura detalhada da performance tanto em tempo de execução (runtime) quanto durante o carregamento da página (load) , com o objetivo de identificar gargalos e otimizar a utilização de recursos. A ferramenta monitora métricas vitais (Core Web Vitals) em tempo real, como LCP, CLS e INP , e oferece a capacidade de comparar dados locais com os dados de campo agregados do Chrome UX Report. As configurações de captura permitem a simulação precisa das condições do usuário, notadamente através da limitação (throttling) de CPU e rede. O relatório de performance resultante fornece uma visualização detalhada da atividade da thread principal através de um gráfico de chamas (flame graph) , juntamente com métricas de memória , capturas de tela do processo de renderização e análises tabulares, como "Bottom-Up" e "Árvore de Chamadas" (Call Tree).
 
 \subsection{Gravador}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-recorder.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Gravador" (Recorder) constitui uma ferramenta de diagnóstico avançada, projetada para a análise e depuração de fluxos de interação do usuário em aplicações web. Sua funcionalidade central permite a captura e reprodução de sequências de eventos do usuário, facilitando a identificação de anomalias em caminhos de conversão e a medição da performance. A ferramenta oferece capacidades de edição interativa das etapas gravadas, permitindo a inserção de pontos de interrupção (breakpoints) e a execução passo a passo para uma depuração detalhada. Adicionalmente, os fluxos de usuário capturados podem ser exportados em formatos estruturados, como JSON, ou como scripts de automação para bibliotecas externas, notavelmente o Puppeteer, permitindo a integração com processos de teste automatizados.
 
 \subsection{Renderização}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-render.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Renderização" (Rendering) é um conjunto de ferramentas de diagnóstico focado na análise de aspectos visuais e de performance da renderização de conteúdo web. Suas funcionalidades primárias permitem a identificação de problemas de desempenho, como repinturas (Paint Flashing), mudanças de layout (Layout Shifts), problemas de rolagem, e a visualização de estatísticas de renderização e métricas das Core Web Vitals. A ferramenta também oferece capacidades avançadas de emulação de recursos de mídia CSS, permitindo testar como a página é renderizada sob diferentes condições, como esquemas de cores preferidos ou redução de movimento, sem necessidade de alteração no código-fonte. Adicionalmente, disponibiliza efeitos para depuração, incluindo a emulação de foco na página, a ativação de um modo escuro automático e a simulação de diversas deficiências visuais para análise de acessibilidade.
 
 \subsection{Segurança}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-security.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Privacidade e Segurança" é uma ferramenta de diagnóstico que permite a inspeção e depuração de protocolos de segurança e o gerenciamento da privacidade da página. Esta funcionalidade possibilita a análise das origens dos recursos, exibindo detalhes da conexão, avisos de segurança HTTP e informações de certificados. O painel identifica problemas críticos, como origens principais não seguras (solicitadas via HTTP) , configurações de HTTPS corrompido (por exemplo, certificados inválidos) e a ocorrência de conteúdo misto, onde recursos inseguros são requisitados em uma página segura. Adicionalmente, a seção de "Privacidade" oferece mecanismos para inspecionar e simular a limitação temporária de cookies de terceiros, permitindo a verificação do comportamento do site sob restrições de rastreamento.
 
 \subsection{Fontes}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-source.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Fontes" (Sources) constitui um ambiente integrado para a inspeção, edição e depuração dos recursos de uma aplicação web. Ele permite o acesso e a visualização da árvore de arquivos carregados, incluindo scripts JavaScript, folhas de estilo CSS e imagens. Sua funcionalidade principal é a depuração de JavaScript , permitindo ao desenvolvedor definir pontos de interrupção (breakpoints) para pausar intencionalmente a execução do código e analisar o fluxo de controle linha por linha. Adicionalmente, o painel funciona como um editor de código-fonte para CSS e JavaScript , possibilita a criação e execução de "Snippets" (fragmentos de script reutilizáveis) e suporta a configuração de "Workspaces" para persistir as modificações feitas no navegador diretamente no sistema de arquivos local.
 
 \subsection{Autofill}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-autofill.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Autofill" (Preenchimento automático) é uma ferramenta de diagnóstico utilizada para inspecionar e depurar o preenchimento de informações de endereço em formulários web. Esta funcionalidade permite a análise do mapeamento entre os campos de formulário detectados, os valores previstos determinados heuristicamente pelo navegador e os dados de endereço reais salvos pelo usuário que são inseridos. O painel apresenta uma visualização tabular detalhada dessa correspondência e oferece a capacidade de injetar dados de endereço de teste para validar o comportamento do formulário. Adicionalmente, ele auxilia na identificação de problemas de implementação, que são relatados no painel "Issues" (Problemas) para corrigir atributos de preenchimento automático incorretos.
 
 \subsection{Animações}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-animations.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Animações" (Animations) é uma ferramenta de diagnóstico para a inspeção e modificação de sequências de animação. Ele captura e agrupa automaticamente animações CSS, transições CSS, animações da Web (Web Animations API) e a API View Transitions , embora não ofereça suporte a animações baseadas em requestAnimationFrame. A ferramenta permite a inspeção detalhada de grupos de animação, possibilitando ao desenvolvedor diminuir a velocidade, repetir ou analisar o código-fonte associado. As funcionalidades de modificação permitem o ajuste interativo de parâmetros temporais, como duração, atraso (delay) e os deslocamentos de keyframes. Adicionalmente, o painel facilita a depuração da API View Transitions, permitindo a edição de seus pseudoelementos CSS (ex: ::view-transition) enquanto a execução da animação está pausada.
 
 \subsection{Aplicativo}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-application.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Application" (Aplicativo) é uma ferramenta de diagnóstico abrangente utilizada para inspecionar, modificar e depurar os diversos aspectos de armazenamento, manifesto e execução de uma aplicação web. Ele permite a análise do manifest.json , a inspeção e depuração de service workers, incluindo a emulação de eventos push , e o gerenciamento de dados do site, como a simulação de cotas de armazenamento. A ferramenta oferece acesso granular para visualização e edição de múltiplos mecanismos de armazenamento do lado do cliente, incluindo Local Storage, Session Storage , IndexedDB , Cookies , Shared Storage e Cache Storage. Adicionalmente, o painel facilita o teste de serviços em segundo plano, como Background Fetch , Background Sync e Speculative Loads , e a inspeção da estrutura de frames da página e suas políticas de segurança associadas.
 
 \subsection{Alterações}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-changes.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Alterações" (Changes) opera como uma ferramenta de monitoramento em tempo real para modificações de código-fonte executadas diretamente no ambiente de inspeção do navegador. Esta funcionalidade rastreia edições efetuadas em arquivos CSS, seja no painel "Elementos > Estilos" ou em "Origens" , e em arquivos JavaScript dentro do painel "Origens". O rastreamento de alterações em HTML também é suportado, contanto que o recurso "Substituições locais" (Local Overrides) esteja habilitado. A ferramenta apresenta uma visualização diff formatada automaticamente , que destaca inserções e exclusões de código. Funcionalidades adicionais incluem a capacidade de copiar todas as alterações de CSS acumuladas e a opção de reverter todas as modificações aplicadas a um arquivo específico.
 
 \subsection{Cobertura}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-coverage.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Cobertura" (Coverage) é uma ferramenta de diagnóstico projetada para identificar código JavaScript e CSS não executado. Esta funcionalidade opera através da instrumentação do código durante uma sessão de gravação, que pode ser iniciada com um recarregamento da página, para monitorar quais partes do código são de fato utilizadas durante o carregamento e a interação do usuário. Ao concluir a gravação, a ferramenta gera um relatório que quantifica, para cada recurso analisado, o total de bytes e o volume exato de "bytes não usados". Adicionalmente, o painel "Cobertura" oferece uma visualização detalhada linha por linha no painel "Origens", demarcando o código não utilizado. A análise pode ser configurada por escopo ("Por função" ou "Por bloco") , permitindo que desenvolvedores isolem e removam código supérfluo com o objetivo de otimizar o desempenho de carregamento da página e reduzir o consumo de dados da rede.
 
 \subsection{Visão geral de CSS}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-overview-css.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Visão geral de CSS" (CSS Overview) é uma ferramenta de diagnóstico que, mediante uma captura iniciada pelo usuário , gera um relatório estatístico abrangente sobre a utilização de CSS em uma página web, com o objetivo de identificar potenciais otimizações. Este relatório coleta dados de todas as ocorrências de CSS, incluindo declarações não utilizadas , e estrutura a informação em seções principais: "Resumo da visão geral" , "Cores", que também identifica problemas de baixo contraste , "Informações da fonte" , "Declarações não utilizadas" e "Media queries". A ferramenta permite a investigação interativa dos elementos afetados, oferecendo funcionalidades para destacá-los na página ou inspecioná-los diretamente no painel "Elementos".
 
 \subsection{Recursos para desenvolvedores}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-developer-resources.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Recursos para desenvolvedores" (Developer Resources) é uma ferramenta de diagnóstico utilizada para verificar o status de carregamento dos mapas de origem (source maps) pelo Chrome DevTools. Por padrão, o DevTools tenta carregar automaticamente os mapas de origem ao ser aberto , e este painel exibe o "Status" e eventuais mensagens de "Erro" resultantes dessas tentativas. A ferramenta permite a filtragem dos recursos por URL ou mensagem de erro e oferece opções para solucionar falhas de carregamento, como problemas de cross-origin, ao permitir que os mapas sejam requisitados através do próprio site. Adicionalmente, caso os mapas de origem não estejam presentes no ambiente, como em produção , o painel viabiliza o carregamento manual mediante o fornecimento de uma URL , permitindo assim a depuração do código-fonte original.
 
 \subsection{Problemas}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-issues.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Problemas" (Issues) atua como um agregador centralizado para diagnósticos e anomalias detectadas pelo navegador, como problemas de cookies, conteúdo misto, erros de CORS e violações da Política de Segurança de Conteúdo (CSP). Sua função é reduzir a verbosidade e a desordem de notificações no "Console", apresentando os problemas de forma estruturada, agregada e acionável. Cada item reportado inclui uma descrição contextual, uma solução recomendada e uma seção de "Recursos Afetados" que fornece links diretos para o contexto relevante em outros painéis, como "Rede" ou "Elementos". A ferramenta também permite agrupar os problemas por tipo e filtrar a exibição de problemas relacionados a cookies de terceiros.
 
 \subsection{Camadas}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-layers.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Camadas" (Layers) é uma ferramenta de diagnóstico que permite a análise da composição de renderização de um website. Ele apresenta um diagrama 3D interativo que ilustra como o navegador organiza o conteúdo em distintas camadas. Esta visualização auxilia na identificação de problemas de renderização, na otimização de animações e na depuração de performance de rolagem. A ferramenta lista todas as camadas renderizadas em uma árvore expansível e fornece detalhes como tamanho, contagem de pintura (Paint Count) e motivos para a composição (Compositing Reasons). Funcionalidades adicionais incluem a capacidade de inspecionar informações do "Paint Profiler" e identificar regiões de rolagem lenta (Slow scroll rects).
 
 \subsection{Mídia}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-midia.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Mídia" (Media) é a ferramenta primária para a inspeção e depuração de players de mídia incorporados em uma página web. Ele identifica e lista todas as fontes de áudio e vídeo ativas, permitindo a análise detalhada de cada player. A ferramenta é segmentada em abas que expõem dados técnicos: "Properties" (Propriedades) exibe informações como resolução e codecs; "Events" (Eventos) registra todos os eventos emitidos pelo player; "Messages" (Mensagens) apresenta logs de diagnóstico filtráveis; e "Timeline" (Linha do tempo) visualiza em tempo real os estados de reprodução e buffer. O painel também permite a exportação das informações do player para análise externa.
 
 \subsection{Inspetor de memória}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-memory-inspector.jpg}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O "Inspetor de memória" (Memory Inspector) é uma ferramenta de diagnóstico projetada para a inspeção de buffers de memória binária, como ArrayBuffer , TypedArray e DataView em JavaScript, além da WebAssembly.Memory de aplicações WebAssembly (Wasm) compiladas a partir de C++. A interface exibe o buffer de memória apresentando os endereços de byte e seus valores em formato hexadecimal , uma representação ASCII adjacente e um "Inspetor de valor" que decodifica os bytes selecionados em múltiplos formatos (e.g., ponto flutuante, inteiro) e codificações. A ferramenta permite a navegação direta para endereços de memória específicos , a alternância de endianidade (endianness) e pode ser iniciada dinamicamente durante a depuração a partir do painel "Escopo" para analisar o estado da memória de um objeto em um ponto de interrupção.
 
 \subsection{Condições de rede}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-network-conditions.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Condições de rede" (Network Conditions) é uma ferramenta de emulação que permite ao desenvolvedor substituir a string do user agent e simular diferentes velocidades de rede. A substituição da string do user agent altera a forma como o navegador se identifica para os servidores web, o que é utilizado para testar design responsivo, compatibilidade e detecção de recursos ao simular navegadores distintos ou versões anteriores. A ferramenta também permite a personalização das Dicas de Cliente HTTP (User-Agent Client Hints). A funcionalidade de limitação de rede (throttling) possibilita a simulação de conexões de rede variadas, como 3G rápida, 3G lenta ou offline, auxiliando na análise do comportamento da aplicação sob diferentes condições de conectividade
 
 \subsection{Bloqueio de solicitações de rede}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-network-request-blocking.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Bloqueio de solicitações de rede" (Network Request Blocking) é uma funcionalidade de diagnóstico utilizada para testar o comportamento de uma página web sob a condição de falha no carregamento de recursos específicos, como imagens ou folhas de estilo. A ferramenta permite a definição de múltiplos "padrões" de bloqueio, os quais podem ser URLs completos, URLs parciais com correspondência de curinga (*), ou nomes de domínio. O desenvolvedor pode adicionar, editar, remover e alternar o estado (ativo/inativo) desses padrões. As regras de bloqueio também podem ser iniciadas contextualmente a partir do painel "Rede". Uma vez ativado, o painel contabiliza e exibe o número de solicitações interceptadas que correspondem a cada padrão definido.
 
 \subsection{Monitor de Desempenho}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-performance-monitor.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O "Monitor de Desempenho" (Performance Monitor) é uma ferramenta de diagnóstico que fornece uma visualização em tempo real do desempenho de carregamento e execução de uma aplicação web. A ferramenta apresenta uma linha do tempo que plota graficamente diversas métricas, permitindo que estas sejam ativadas ou desativadas para análise. As métricas rastreadas incluem: uso da CPU , tamanho do heap JavaScript , o número total de nós DOM, listeners de eventos JavaScript, documentos e frames , bem como a frequência de layouts e recálculos de estilo por segundo. Notavelmente, o monitor persiste seus dados durante a navegação entre páginas , auxiliando na identificação de padrões de uso de recursos que podem indicar ineficiências de código ou problemas como layout thrashing.
 
 \subsection{Monitor de protocolo}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-protocol-monitor.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O "Monitor de protocolo" (Protocol Monitor) é uma ferramenta que permite a inspeção de todas as solicitações e respostas do Protocolo Chrome DevTools (CDP). Esta funcionalidade registra as mensagens do CDP e permite a análise detalhada dos dados de solicitação e resposta. A ferramenta viabiliza o envio direto de comandos brutos do CDP , suportando tanto comandos simples sem parâmetros quanto comandos complexos com parâmetros estruturados em JSON , auxiliado por um editor de comandos dedicado. Adicionalmente, o monitor permite o download das mensagens registradas em formato JSON para análise externa.
 
 \subsection{Origem rápida}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-quick-source.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Origem rápida" (Quick source) opera como uma interface suplementar para visualização e edição de arquivos de origem. Sua principal utilidade reside na sua integração na "gaveta" (drawer), por padrão na parte inferior da janela do DevTools , o que permite ao desenvolvedor inspecionar e modificar o código-fonte enquanto mantém acesso simultâneo a outros painéis. Esta funcionalidade elimina a necessidade de alternar repetidamente entre o painel "Origens" (Sources) principal e outras ferramentas. O painel "Origem rápida" abre automaticamente o último arquivo editado no painel "Origens" e permite a abertura de outros arquivos através de atalhos de teclado (Command+P ou Ctrl+P) , que são contextualmente redirecionados para este painel quando ele está em foco.
 
 \subsection{Sensores}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-sensors.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "Sensores" (Sensors) é uma ferramenta de emulação projetada para simular diversas entradas de hardware e estados do dispositivo. Suas principais funcionalidades incluem a substituição de dados de geolocalização , a simulação de orientação do dispositivo , a forçagem de eventos de toque e a emulação de estados da API Idle Detection (detector inativo). Adicionalmente, a ferramenta viabiliza a substituição do valor de simultaneidade de hardware (navigator.hardwareConcurrency) e a simulação de estados da API Compute Pressure (pressão da CPU).
 
 \subsection{WebAudio}
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-webaudio.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "WebAudio" é uma ferramenta de diagnóstico que exibe métricas de desempenho para instâncias de AudioContext em aplicações que utilizam a API WebAudio. Após a seleção de um contexto de áudio específico , o painel apresenta métricas chave, incluindo o Estado (State) operacional (e.g., running, suspended) , a Taxa de Amostragem (Sample Rate) em Hz , o Tamanho do Buffer de Callback (Callback Buffer Size) em quadros e o Número Máximo de Canais de Saída (Max Output Channel Count). Adicionalmente, a ferramenta monitora em tempo real o Intervalo de Callback (Callback Interval) e a Capacidade de Renderização (Render Capacity) do processador de áudio.
 
-\subsection{WebAuthn}
+\subsection{WebAuthn} 
+\begin{figure}[!htb]
+    \centering
+    \caption{Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-webauthn.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-devtools}
+\end{figure}
 O painel "WebAuthn" fornece uma interface para a criação e interação com autenticadores virtuais baseados em software, permitindo a depuração da API Web Authentication. A ferramenta possibilita a ativação de um ambiente de autenticador virtual, no qual desenvolvedores podem adicionar, renomear e remover autenticadores. É possível configurar o protocolo (e.g., ctap2, u2f) e o transporte (e.g., usb, nfc) de cada autenticador, além de registrar credenciais e monitorar seus IDs e contagens de assinaturas durante os testes.
 
