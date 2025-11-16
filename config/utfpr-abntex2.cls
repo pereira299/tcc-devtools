@@ -312,7 +312,7 @@
 % Folha de rosto
 % -----------------------------------------------------------------------------
 \makeatletter
-\renewcommand{\folhaderostocontent}
+\renewcommand{\imprimirfolhaderosto}
 {%
     \setcounter{page}{2}
     \begin{center}
@@ -325,7 +325,7 @@
         \ABNTEXchapterfont\large\MakeUppercase{\imprimirtitulo}
         \abntex@ifnotempty{\imprimirsubtitulo}
 	{%
-        	{\ABNTEXchapterfont: }{\large{\imprimirsubtitulo}}
+        	{\ABNTEXchapterfont \large \imprimirsubtitulo:}
         }
     \end{center}
 

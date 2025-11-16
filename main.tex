@@ -18,10 +18,12 @@
 
 
 % INCLUI ARQUIVOS DE CONFIGURAÇÕES-------------------------------------------------------------------------------
+%\usepackage[utf8]{inputenc}
 \input{config/packages}
 \input{config/pdf}
-\usepackage{tabularx}
-\usepackage[cp1252]{inputenc}
+
+% Define \thedate if the class or packages don't provide it (used by \imprimircapa)
+\providecommand{\thedate}{\today}
 
 \begin{document}
 
@@ -32,29 +34,25 @@
 \include{src/pre-textuais/folha-rosto}
 
 % INSERE ELEMENTOS PRÉ-TEXTUAIS
-\pretextual
+% \pretextual
 \imprimircapa % Comando para imprimir Capa
 \imprimirfolhaderosto % Comando para imprimir Folha de rosto
 \include{src/pre-textuais/resumo}
 \include{src/pre-textuais/abstract}
-
 \textual % INSERE ELEMENTOS TEXTUAIS
 \include{src/textuais/introducao}
-%\include{src/textuais/objetivos}%
-%\include{src/textuais/justificativa}%
+\include{src/textuais/objetivos}
+\include{src/textuais/justificativa}
 \include{src/textuais/materiais}
 \include{src/textuais/metodologia}
 \include{src/textuais/pesquisa}
 \include{src/textuais/lista-ferramentas}
-\include{src/textuais/ferramentas/chrome}
-\include{src/textuais/ferramentas/firefox}
-\include{src/textuais/ferramentas/safari}
 \include{src/textuais/tabela-ferramentas}
-\include{src/textuais/ferramentas/edge}
 \include{src/textuais/resultados}
 
 \postextual
 % INSERE ELEMENTOS PÓS-TEXTUAIS
-\include{src/pos-textuais/referencia}        % Referências
+\include{src/pos-textuais/referencia}        
+% Referências
 
 \end{document}
