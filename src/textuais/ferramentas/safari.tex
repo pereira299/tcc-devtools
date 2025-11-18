@@ -16,14 +16,14 @@ ponta a ponta.
     {\footnotesize Fonte: Apple Developer Documentation}
     \label{fig:safari-elements}
 \end{figure}
-A aba \textbf{Elementos} (\emph{Elements}) constitui a interface primária para a inspeção e manipulação em tempo real do 
+A aba \textbf{Elementos} (\emph{Elements}), apresentada na figura \ref{fig:safari-elements}, constitui a interface primária para a inspeção e manipulação em tempo real do 
 Document Object Model (DOM) de uma página. Ela apresenta uma visualização interativa da árvore DOM, permitindo a edição direta 
 de nós, atributos e conteúdo textual, ao mesmo tempo que identifica nós não renderizados e destaca elementos com layouts 
-específicos, como CSS Grid ou Flexbox, através de emblemas (\emph{badges}). Uma barra lateral de detalhes complementa a árvore, 
+específicos, como CSS Grid ou Flexbox, através de emblemas (\emph{badges}) \cite{safari-elements}. Uma barra lateral de detalhes complementa a árvore, 
 oferecendo ferramentas granulares para depuração: o painel \enquote{Styles} (Estilos) permite a análise e modificação de regras 
 CSS, organizadas por especificidade e herança, com editores especializados; o painel \enquote{Computed} (Computado) exibe os 
 valores CSS finais aplicados e visualiza o box model; e painéis adicionais facilitam a inspeção de layout (Grid/Flexbox), 
-tipografia (incluindo fontes variáveis), e dados de acessibilidade.
+tipografia (incluindo fontes variáveis), e dados de acessibilidade \cite{safari-elements}.
 
 \subsection{Console}
 \begin{figure}[!htb]
@@ -33,15 +33,14 @@ tipografia (incluindo fontes variáveis), e dados de acessibilidade.
     {\footnotesize Fonte: Apple Developer Documentation}
     \label{fig:safari-console}
 \end{figure}
-A aba \textbf{Console} (\emph{Console}) opera como um hub de diagnóstico multifacetado, funcionando simultaneamente como uma 
+A aba \textbf{Console} (\emph{Console}), exibida na figura \ref{fig:safari-console}, opera como um hub de diagnóstico multifacetado, funcionando simultaneamente como uma 
 interface de linha de comando (CLI) para a execução interativa de JavaScript e como um sistema de registro (\emph{logging}) 
 abrangente. Sua utilidade primária reside na capacidade de interagir em tempo real com o ambiente JavaScript da página, 
 permitindo a depuração interativa, a modificação dinâmica de variáveis de tempo de execução e a recuperação imediata de 
-informações de estado. Além da execução de código, o Console é crítico para o relatório de erros, avisos e mensagens 
+informações de estado \cite{safari-console}. Além da execução de código, o Console é crítico para o relatório de erros, avisos e mensagens 
 informacionais, oferecendo um fluxo de trabalho eficiente onde a seleção de um erro pode navegar diretamente para o código-fonte 
-correspondente. A ferramenta transcende um simples Read-Eval-Print Loop (REPL) ao integrar funcionalidades de monitoramento de 
-rede para rastrear atividades e durações de requisições e a inspeção de Event Listeners, fornecendo, assim, uma visão holística 
-da saúde da página.
+correspondente \cite{safari-console}. Além disso, a ferramenta oferece funcionalidades de monitoramento de rede para rastrear atividades e durações de 
+requisições e a inspeção de Event Listeners, fornecendo, assim, uma visão holística da saúde da página \cite{safari-console}.
 
 \subsection{Fontes}
 \begin{figure}[!htb]
@@ -51,14 +50,14 @@ da saúde da página.
     {\footnotesize Fonte: Apple Developer Documentation}
     \label{fig:safari-sources}
 \end{figure}
-A aba \textbf{Fontes} (\emph{Sources}) centraliza a inspeção de recursos e a depuração de JavaScript. Ela cataloga todos os 
+A aba \textbf{Fontes} (\emph{Sources}), ilustrada na figura \ref{fig:safari-sources}, centraliza a inspeção de recursos e a depuração de JavaScript. Ela cataloga todos os 
 recursos da página, incluindo requisições dinâmicas, permitindo organização (por tipo ou caminho) e filtragem. A ferramenta 
 fornece visualizações de conteúdo de recursos, como dados de requisição/resposta, e representações formatadas para JSON e 
 XML/HTML, além de utilitários de análise de código, como \emph{code coverage} (cobertura de código) e \emph{type profiling} 
-(perfilagem de tipos). Seu componente principal é o depurador de JavaScript, que oferece controle total da execução (pausa, 
+(perfilagem de tipos) \cite{safari-sources}. Seu componente principal é o depurador de JavaScript, que oferece controle total da execução (pausa, 
 continuação, \emph{step over}, \emph{step in}, \emph{step out}) e gerenciamento de múltiplos tipos de breakpoints (DOM, Evento, 
 URL). Quando a execução é pausada, o inspetor exibe a Pilha de Chamadas (\emph{Call Stack}), que inclui rastreamento de chamadas 
-assíncronas, e a Cadeia de Escopo (\emph{Scope Chain}) para análise de variáveis. A aba também suporta a criação de 
+assíncronas, e a Cadeia de Escopo (\emph{Scope Chain}) para análise de variáveis \cite{safari-sources}. A aba também suporta a criação de 
 \emph{Local Overrides} para substituir respostas de rede e \emph{Console Snippets}.
 
 \subsection{Rede}
@@ -69,14 +68,14 @@ assíncronas, e a Cadeia de Escopo (\emph{Scope Chain}) para análise de variáv
     {\footnotesize Fonte: Apple Developer Documentation}
     \label{fig:safari-network}
 \end{figure}
-A aba \textbf{Rede} (\emph{Network}) fornece uma tabulação exaustiva de todos os recursos requisitados, abrangendo desde ativos 
+A aba \textbf{Rede} (\emph{Network}), apresentada na figura \ref{fig:safari-network}, fornece uma tabulação exaustiva de todos os recursos requisitados, abrangendo desde ativos 
 estáticos (CSS, JS, HTML) até requisições de API, como XMLHttpRequest (XHR), \emph{fetch} e WebSocket. A interface permite a 
 filtragem de recursos por URL ou tipo, a persistência de logs entre navegações (\enquote{Preserve Log}) e a desabilitação do 
-cache de recursos (\enquote{Ignore Cache}). A seleção de um recurso individual revela painéis dedicados para inspeção de 
+cache de recursos (\enquote{Ignore Cache}) \cite{safari-network}. A seleção de um recurso individual revela painéis dedicados para inspeção de 
 cabeçalhos (\emph{Headers}) de requisição e resposta, cookies, detalhes de payload (\emph{Sizes}) e um detalhamento gráfico das 
 fases de temporização (\emph{Timing}) da requisição. A ferramenta ainda exibe estatísticas agregadas, como o tempo total de 
 carregamento (\emph{Load Time}) e o total de bytes transferidos, e suporta a exportação e importação de dados no formato HTTP 
-Archive (HAR).
+Archive (HAR) \cite{safari-network}.
 
 \subsection{Linha do tempo}
 \begin{figure}[!htb]
@@ -86,16 +85,16 @@ Archive (HAR).
     {\footnotesize Fonte: Apple Developer Documentation}
     \label{fig:safari-timeline}
 \end{figure}
-A aba \textbf{Linhas do Tempo} (\emph{Timelines}) constitui o conjunto de ferramentas de profiling de performance e introspecção 
+A aba \textbf{Linhas do Tempo} (\emph{Timelines}), apresentada na figura \ref{fig:safari-timeline}, constitui o conjunto de ferramentas de profiling de performance e introspecção 
 do Web Inspector. Ela opera através da gravação de atividades da página, desabilitando temporariamente recursos de depuração, 
 como otimizações JIT e breakpoints, para assegurar medições realistas do desempenho. Os dados capturados são organizados 
-principalmente na \enquote{Events View} (Visualização de Eventos) e na \enquote{Frames View} (Visualização de Quadros). A 
+principalmente na \enquote{Events View} (Visualização de Eventos) e na \enquote{Frames View} (Visualização de Quadros) \cite{safari-timeline}. A 
 \enquote{Events View} plota a atividade em um gráfico geral e a segmenta em linhas do tempo especializadas, como 
 \enquote{Network Requests}, \enquote{Layout \& Rendering} (para recalculos de estilo, layout e \emph{paint}), 
 \enquote{JavaScript \& Events} (que gera árvores de chamadas ou \emph{call trees}), \enquote{CPU} e \enquote{Memory} 
 (incluindo a captura de \emph{heap snapshots} via \enquote{JavaScript Allocations}). Em contrapartida, a \enquote{Frames View} 
 agrupa todas as atividades pelo frame de renderização em que ocorreram, analisando o tempo de execução de cada quadro e 
-comparando-o com os benchmarks de 30 e 60 FPS.
+comparando-o com os benchmarks de 30 e 60 FPS \cite{safari-timeline}.
 
 \subsection{Armazenamento}
 \begin{figure}[!htb]
@@ -105,13 +104,13 @@ comparando-o com os benchmarks de 30 e 60 FPS.
     {\footnotesize Fonte: Apple Developer Documentation}
     \label{fig:safari-storage}
 \end{figure}
-A aba \textbf{Armazenamento} (\emph{Storage}) fornece uma inspeção detalhada e capacidades de gerenciamento para os diversos 
-mecanismos de armazenamento de dados do lado do cliente. Ela cataloga dados de Application Cache, cookies, bancos de dados 
-(como Web SQL e IndexedDB), \emph{local storage} e \emph{session storage}. A ferramenta permite não apenas a visualização de 
-valores, metadados de cookies (como domínio e expiração) e o uso de espaço, mas também a modificação e exclusão ativas de 
-entradas. Essa funcionalidade é crucial para a depuração de problemas de persistência de dados, como conteúdo obsoleto 
-(\emph{stale content}), gerenciamento de estados de usuário (transitórios e persistentes), e a verificação de aplicações 
-\emph{stateful} ou com capacidades offline.
+A aba \textbf{Armazenamento} (\emph{Storage}), apresentada na figura \ref{fig:safari-storage}, fornece uma inspeção detalhada 
+e capacidades de gerenciamento para os diversos mecanismos de armazenamento de dados do lado do cliente. Ela cataloga dados de 
+Application Cache, cookies, bancos de dados (como Web SQL e IndexedDB), \emph{local storage} e \emph{session storage} \cite{safari}. 
+A ferramenta permite não apenas a visualização de valores, metadados de cookies (como domínio e expiração) e o uso de espaço, mas 
+também a modificação e exclusão ativas de entradas. Essa funcionalidade é crucial para a depuração de problemas de persistência de 
+dados, como conteúdo obsoleto (\emph{stale content}), gerenciamento de estados de usuário (transitórios e persistentes), e a verificação 
+de aplicações \emph{stateful} ou com capacidades offline \cite{safari}.
 
 \subsection{Gráficos}
 \begin{figure}[!htb]
@@ -121,14 +120,13 @@ entradas. Essa funcionalidade é crucial para a depuração de problemas de pers
     {\footnotesize Fonte: Apple Developer Documentation}
     \label{fig:safari-graficos}
 \end{figure}
-A aba \textbf{Gráficos} (\emph{Graphics}) é uma ferramenta especializada, projetada para fluxos de trabalho técnicos e 
+A aba \textbf{Gráficos} (\emph{Graphics}), exibida na figura \ref{fig:safari-graficos}, é uma ferramenta especializada, projetada para fluxos de trabalho técnicos e 
 criativos, que oferece funcionalidades para a inspeção, pré-visualização e manipulação de elementos gráficos, animações e 
-conteúdo do elemento HTML5 \texttt{<canvas>}. Ela provê capacidades de análise de assets de imagem, detalhando dimensões, 
+conteúdo do elemento HTML5 \texttt{<canvas>} \cite{safari}. Ela provê capacidades de análise de assets de imagem, detalhando dimensões, 
 tamanho de arquivo e formato para fins de otimização, e permite a inspeção profunda e edição direta da estrutura e atributos 
-de Scalable Vector Graphics (SVG). Adicionalmente, a ferramenta suporta a inspeção de formatos de imagem modernos como WebP e 
+de Scalable Vector Graphics (SVG) \cite{safari}. Adicionalmente, a ferramenta suporta a inspeção de formatos de imagem modernos como WebP e 
 AVIF, a modificação de atributos do \texttt{<canvas>} (ex: largura, altura), e a pré-visualização de keyframes de animações 
-(\enquote{Animation Preview}) oriundas de CSS, JavaScript ou canvas. O design da ferramenta reflete um foco duplo na manipulação 
-visual e na otimização da performance de entrega dos ativos.
+(\enquote{Animation Preview}) oriundas de CSS, JavaScript ou canvas \cite{safari}. 
 
 \subsection{Camadas}
 \begin{figure}[!htb]
@@ -138,15 +136,15 @@ visual e na otimização da performance de entrega dos ativos.
     {\footnotesize Fonte: Apple Developer Documentation}
     \label{fig:safari-layers}
 \end{figure}
-A aba \textbf{Camadas} (\emph{Layers}) fornece uma interface para a análise da performance de renderização, visualizando o 
+A aba \textbf{Camadas} (\emph{Layers}), apresentada na figura \ref{fig:safari-layers}, fornece uma interface para a análise da performance de renderização, visualizando o 
 processo de \emph{compositing} (composição). Ela exibe como os nós DOM, após o cálculo de layout, são desenhados em superfícies 
 distintas (camadas) que são subsequentemente compostas para formar a visualização final da página. Esse mecanismo é crítico, 
 pois o isolamento de um elemento em sua própria camada permite animações através de simples recomposição, em vez de exigir um 
-\emph{repaint} (repintura) completo da página, embora essa otimização resulte em um custo de memória. A ferramenta apresenta uma 
+\emph{repaint} (repintura) completo da página, embora essa otimização resulte em um custo de memória \cite{safari-layers}. A ferramenta apresenta uma 
 visualização 3D interativa da árvore de camadas e um painel lateral (\enquote{All Layers}) que detalha o custo de memória, a 
-contagem de \emph{paints} e as razões específicas que justificaram a criação de cada camada. Adicionalmente, inclui diagnósticos 
+contagem de \emph{paints} e as razões específicas que justificaram a criação de cada camada \cite{safari-layers}. Adicionalmente, inclui diagnósticos 
 visuais, como \enquote{Show compositing borders} (Exibir bordas de composição) e \enquote{Enable paint flashing} (Habilitar flash 
-de pintura), para identificar atividade de \emph{repaint} e os limites das camadas.
+de pintura), para identificar atividade de \emph{repaint} e os limites das camadas \cite{safari-layers}.
 
 \subsection{Auditoria}
 \begin{figure}[!htb]
@@ -156,23 +154,23 @@ de pintura), para identificar atividade de \emph{repaint} e os limites das camad
     {\footnotesize Fonte: Apple Developer Documentation}
     \label{fig:safari-audit}
 \end{figure}
-A aba \textbf{Auditoria} (\emph{Audit}) fornece um framework para a execução de coleções de testes automatizados contra a página 
+A aba \textbf{Auditoria} (\emph{Audit}), apresentada na figura \ref{fig:safari-audit}, fornece um framework para a execução de coleções de testes automatizados contra a página 
 inspecionada, projetados para avaliar a estrutura do DOM, a conformidade de atributos de acessibilidade (conforme especificações 
-como WAI-ARIA) e a aderência a regras de \emph{design system}. Cada auditoria é definida como um grupo de testes ou um caso de 
+como WAI-ARIA) e a aderência a regras de \emph{design system} \cite{safari-audit}. Cada auditoria é definida como um grupo de testes ou um caso de 
 teste individual, consistindo em um snippet de JavaScript executado no contexto da página. Após a execução, os resultados são 
 classificados como \emph{Pass} (Aprovado), \emph{Warning} (Aviso), \emph{Failed} (Falha), \emph{Error} (Erro) ou \emph{Unsupported} 
-(Não Suportado). A ferramenta permite a criação e modificação de auditorias personalizadas através de uma estrutura JSON, 
+(Não Suportado) \cite{safari-audit}. A ferramenta permite a criação e modificação de auditorias personalizadas através de uma estrutura JSON, 
 suportando funções de teste assíncronas que podem retornar objetos de resultado complexos, incluindo referências a \texttt{domNodes}. 
 Notavelmente, as funções de teste recebem acesso a um objeto \texttt{WebInspectorAudit} especial, que expõe APIs para consultar 
-recursos da página e dados da árvore de acessibilidade que não são acessíveis ao JavaScript padrão.
+recursos da página e dados da árvore de acessibilidade que não são acessíveis ao JavaScript padrão \cite{safari-audit}.
 
 \subsection{WebDriver}
 O \textbf{WebDriver} para Safari fornece a implementação da Apple do protocolo W3C WebDriver, permitindo a automação de testes 
 de ponta a ponta para o conteúdo web. A arquitetura é mediada pelo executável \texttt{safaridriver}, que recebe comandos REST 
-API de bibliotecas de cliente, como o Selenium, e os encaminha para a instância do navegador. Para garantir a integridade do 
+API de bibliotecas de cliente, como o Selenium, e os encaminha para a instância do navegador \cite{safari-webdriver}. Para garantir a integridade do 
 teste e prevenir contaminação de estado, a execução é confinada a ``Janelas de Automação Isoladas'' (\emph{Isolated Automation Windows}), 
-que operam em um modo efêmero, similar à navegação privada, isolado do histórico, cookies e preferências do usuário. 
+que operam em um modo efêmero, similar à navegação privada, isolado do histórico, cookies e preferências do usuário \cite{safari-webdriver}. 
 Além disso, um painel transparente (``Glass Pane'') é instalado sobre a janela para interceptar e neutralizar interações 
 de usuário (mouse ou teclado) que poderiam comprometer a execução do teste. Notavelmente, o WebDriver mantém 
 integração total com o Web Inspector, permitindo que ferramentas de depuração, como o Console e o depurador de scripts, 
-sejam utilizadas simultaneamente à execução dos testes automatizados.
+sejam utilizadas simultaneamente à execução dos testes automatizados \cite{safari-webdriver}.

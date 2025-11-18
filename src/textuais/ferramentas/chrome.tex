@@ -215,10 +215,10 @@ O painel "Fontes" (\textit{Sources}), como pode ser visto na figura \ref{fig:chr
 integrado para a inspeção, edição e depuração dos recursos de uma aplicação \textit{web}. Ele permite o acesso e a visualização 
 da árvore de arquivos carregados, incluindo \textit{scripts} \textit{JavaScript}, folhas de estilo \textit{CSS} e imagens. Sua funcionalidade principal 
 é a depuração de \textit{JavaScript}, permitindo ao desenvolvedor definir pontos de interrupção (\textit{breakpoints}) para pausar intencionalmente a execução do código e 
-analisar o fluxo de controle linha por linha \cite{chrome-source}. Adicionalmente, o painel funciona como um editor de código-fonte para 
+analisar o fluxo de controle linha por linha \cite{chrome-sources}. Adicionalmente, o painel funciona como um editor de código-fonte para 
 \textit{CSS} e \textit{JavaScript}, possibilita a criação e execução de "\textit{Snippets}" (fragmentos de \textit{script} reutilizáveis) e suporta a 
 configuração de "\textit{Workspaces}" para persistir as modificações feitas no navegador diretamente no sistema de arquivos 
-local \cite{chrome-source}.
+local \cite{chrome-sources}.
 
 \subsection{Autofill}
 \label{sec:chrome-autofill}
@@ -258,13 +258,6 @@ animação está pausada \cite{chrome-animations}.
 
 \subsection{Aplicativo}
 \label{sec:chrome-application}
-\begin{figure}[!htb]
-    \centering
-    \caption{Ferramenta "Aplicativo" do Chrome Devtools}
-    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-application.png}\\
-    {\footnotesize Fonte: Chrome for Developers}
-    \label{fig:chrome-application}
-\end{figure}
 O painel "\textit{Application}" (Aplicativo), exibida na figura \ref{fig:chrome-application}, é uma ferramenta de diagnóstico abrangente utilizada para inspecionar, modificar e 
 depurar os diversos aspectos de armazenamento, manifesto e execução de uma aplicação \textit{web}. Ele permite a análise do 
 \textit{manifest.json}, a inspeção e depuração de \textit{service workers}, including a emulação de eventos \textit{push}, e o gerenciamento de 
@@ -272,6 +265,13 @@ dados do \textit{site}, como a simulação de cotas de armazenamento \cite{chrom
 de múltiplos mecanismos de armazenamento do lado do cliente, incluindo \textit{Local Storage}, \textit{Session Storage}, \textit{IndexedDB}, \textit{Cookies}, 
 \textit{Shared Storage} e \textit{Cache Storage} \cite{chrome-application-storage}. Adicionalmente, o painel facilita o teste de serviços em segundo plano, como \textit{Background Fetch}, 
 \textit{Background Sync} e \textit{Speculative Loads}, e a inspeção da estrutura de \textit{frames} da página e suas políticas de segurança associadas.
+\begin{figure}[!htb]
+    \centering
+    \caption{Ferramenta "Aplicativo" do Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-application.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-application}
+\end{figure}
 
 \subsection{Alterações}
 \label{sec:chrome-changes}
@@ -295,7 +295,7 @@ de CSS acumuladas e a opção de reverter todas as modificações aplicadas a um
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Cobertura" do Chrome Devtools}
-    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-coverage.png}\\
+    \includegraphics[width=0.5 \linewidth]{assets/tools/chrome-coverage.png}\\
     {\footnotesize Fonte: Chrome for Developers}
     \label{fig:chrome-coverage}
 \end{figure}
@@ -307,16 +307,10 @@ para cada recurso analisado, o total de \textit{bytes} e o volume exato de "\tex
 oferece uma visualização detalhada linha por linha na ferramenta "Fontes" \ref{sec:chrome-sources}, demarcando o código não utilizado. A análise pode ser 
 configurada por escopo ("Por função" ou "Por bloco"), permitindo que desenvolvedores isolem e removam código supérfluo com o 
 objetivo de otimizar o desempenho de carregamento da página e reduzir o consumo de dados da rede \cite{chrome-coverage}.
-
+\newpage
 \subsection{Visão geral de CSS}
 \label{sec:chrome-overview-css}
-\begin{figure}[!htb]
-    \centering
-    \caption{Ferramenta "Visão geral de CSS" do Chrome Devtools}
-    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-overview-css.png}\\
-    {\footnotesize Fonte: Chrome for Developers}
-    \label{fig:chrome-overview-css}
-\end{figure}
+
 O painel "Visão geral de \textit{CSS}" (\textit{CSS Overview}), como ilustrado na figura \ref{fig:chrome-overview-css}, é uma ferramenta de 
 diagnóstico que, mediante uma captura iniciada pelo usuário, gera um relatório estatístico abrangente sobre a utilização 
 de \textit{CSS} em uma página \textit{web}, com o objetivo de identificar potenciais otimizações \cite{chrome-overview-css}. Este relatório 
@@ -324,16 +318,16 @@ coleta dados de todas as ocorrências de \textit{CSS}, incluindo declarações n
 principais: "Resumo da visão geral", "Cores", que também identifica problemas de baixo contraste, "Informações da fonte", 
 "Declarações não utilizadas" e "\textit{Media queries}" \cite{chrome-overview-css}. A ferramenta permite a investigação interativa dos elementos afetados, 
 oferecendo funcionalidades para destacá-los na página ou inspecioná-los diretamente no painel "Elementos".
-
-\subsection{Recursos para desenvolvedores}
-\label{sec:chrome-developer-resources}
 \begin{figure}[!htb]
     \centering
-    \caption{Ferramenta "Recursos para desenvolvedores" do Chrome Devtools}
-    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-developer-resources.png}\\
+    \caption{Ferramenta "Visão geral de CSS" do Chrome Devtools}
+    \includegraphics[width=0.6 \linewidth]{assets/tools/chrome-overview-css.png}\\
     {\footnotesize Fonte: Chrome for Developers}
-    \label{fig:chrome-developer-resources}
+    \label{fig:chrome-overview-css}
 \end{figure}
+\subsection{Recursos para desenvolvedores}
+\label{sec:chrome-developer-resources}
+
 O painel "Recursos para desenvolvedores" (\textit{Developer Resources}), exibida na figura \ref{fig:chrome-developer-resources},
 é uma ferramenta de diagnóstico utilizada para verificar o status de carregamento dos mapas de origem (\textit{source maps}) pelo 
 \textit{Chrome DevTools} \cite{chrome-developer-resources}. Por padrão, o \textit{DevTools} tenta carregar automaticamente os mapas de origem ao ser aberto, e este painel exibe o "\textit{Status}" e eventuais mensagens de "Erro" resultantes 
@@ -341,15 +335,16 @@ dessas tentativas. A ferramenta permite a filtragem dos recursos por \textit{URL
 falhas de carregamento, como problemas de \textit{cross-origin}, ao permitir que os mapas sejam requisitados através do próprio \textit{site} \cite{chrome-developer-resources}. 
 Adicionalmente, caso os mapas de origem não estejam presentes no ambiente, como em produção, o painel viabiliza o carregamento 
 manual mediante o fornecimento de uma \textit{URL}, permitindo assim a depuração do código-fonte original.
-\subsection{Camadas}
-\label{sec:chrome-layers}
 \begin{figure}[!htb]
     \centering
-    \caption{Ferramenta "Camadas" do Chrome Devtools}
-    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-layers.png}\\
+    \caption{Ferramenta "Recursos para desenvolvedores" do Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-developer-resources.png}\\
     {\footnotesize Fonte: Chrome for Developers}
-    \label{fig:chrome-layers}
+    \label{fig:chrome-developer-resources}
 \end{figure}
+\subsection{Camadas}
+\label{sec:chrome-layers}
+
 O painel "Camadas" (\textit{Layers}), apresentado na figura \ref{fig:chrome-layers}, é uma ferramenta de diagnóstico que permite 
 a análise da composição de renderização de um \textit{website}. Ele apresenta um diagrama 3D interativo que ilustra como o 
 navegador organiza o conteúdo em distintas camadas \cite{chrome-layers}. Esta visualização auxilia na identificação 
@@ -357,9 +352,23 @@ de problemas de renderização, na otimização de animações e na depuração 
 todas as camadas renderizadas em uma árvore expansível e fornece detalhes como tamanho, contagem de pintura (\textit{Paint Count}) 
 e motivos para a composição (\textit{Compositing Reasons}) \cite{chrome-layers}. Funcionalidades adicionais incluem a capacidade de inspecionar informações 
 do "\textit{Paint Profiler}" e identificar regiões de rolagem lenta (\textit{Slow scroll rects}).
-
+\newpage
+\begin{figure}[!htb]
+    \centering
+    \caption{Ferramenta "Camadas" do Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-layers.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-layers}
+\end{figure}
 \subsection{Mídia}
 \label{sec:chrome-midia}
+
+O painel "Mídia" (\textit{Media}), ilustrado na figura \ref{fig:chrome-midia}, é a ferramenta primária para a inspeção e depuração de 
+\textit{players} de mídia incorporados em uma página \textit{web}. Ele identifica e lista todas as fontes de áudio e vídeo ativas, permitindo a 
+análise detalhada de cada \textit{player} \cite{chrome-midia}. A ferramenta é segmentada em abas que expõem dados técnicos: "\textit{Properties}" (Propriedades) exibe informações como resolução e \textit{codecs}; 
+"\textit{Events}" (Eventos) registra todos os eventos emitidos pelo \textit{player}; "\textit{Messages}" (Mensagens) apresenta \textit{logs} de diagnóstico 
+filtráveis; e "\textit{Timeline}" (Linha do tempo) visualiza em tempo real os estados de reprodução e \textit{buffer} \cite{chrome-midia}. O painel também permite 
+a exportação das informações do \textit{player} para análise externa.
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Mídia" do Chrome Devtools}
@@ -367,12 +376,6 @@ do "\textit{Paint Profiler}" e identificar regiões de rolagem lenta (\textit{Sl
     {\footnotesize Fonte: Chrome for Developers}
     \label{fig:chrome-midia}
 \end{figure}
-O painel "Mídia" (\textit{Media}), ilustrado na figura \ref{fig:chrome-midia}, é a ferramenta primária para a inspeção e depuração de 
-\textit{players} de mídia incorporados em uma página \textit{web}. Ele identifica e lista todas as fontes de áudio e vídeo ativas, permitindo a 
-análise detalhada de cada \textit{player} \cite{chrome-midia}. A ferramenta é segmentada em abas que expõem dados técnicos: "\textit{Properties}" (Propriedades) exibe informações como resolução e \textit{codecs}; 
-"\textit{Events}" (Eventos) registra todos os eventos emitidos pelo \textit{player}; "\textit{Messages}" (Mensagens) apresenta \textit{logs} de diagnóstico 
-filtráveis; e "\textit{Timeline}" (Linha do tempo) visualiza em tempo real os estados de reprodução e \textit{buffer} \cite{chrome-midia}. O painel também permite 
-a exportação das informações do \textit{player} para análise externa.
 
 \subsection{Inspetor de memória}
 \label{sec:chrome-memory-inspector}
@@ -407,7 +410,7 @@ de recursos ao simular navegadores distintos ou versões anteriores \cite{chrome
 Cliente \textit{HTTP} (\textit{User-Agent Client Hints}). A funcionalidade de limitação de rede (\textit{throttling}) possibilita a simulação de conexões 
 de rede variadas, como 3G rápida, 3G lenta ou \textit{offline}, auxiliando na análise do comportamento da aplicação sob diferentes 
 condições de conectividade \cite{chrome-network-conditions}.
-
+\newpage
 \subsection{Bloqueio de solicitações de rede}
 \label{sec:chrome-network-request-blocking}
 \begin{figure}[!htb]
@@ -458,16 +461,10 @@ e permite a análise detalhada dos dados de solicitação e resposta \cite{chrom
 de comandos brutos do CDP, suportando tanto comandos simples sem parâmetros quanto comandos complexos com parâmetros estruturados em \textit{JSON}, 
 auxiliado por um editor de comandos dedicado \cite{chrome-protocol-monitor}. Adicionalmente, o monitor permite o \textit{download} das mensagens 
 registradas em formato \textit{JSON} para análise externa.
-
+\newpage
 \subsection{Origem rápida}
 \label{sec:chrome-quick-source}
-\begin{figure}[!htb]
-    \centering
-    \caption{Ferramenta "Origem rápida" do Chrome Devtools}
-    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-quick-source.png}\\
-    {\footnotesize Fonte: Chrome for Developers}
-    \label{fig:chrome-quick-source}
-\end{figure}
+
 O painel "Origem rápida" (\textit{Quick source}), exibido na figura \ref{fig:chrome-quick-source}, opera como uma interface suplementar 
 para visualização e edição de arquivos de origem. Sua principal utilidade reside na sua integração na "gaveta" (\textit{drawer}), por 
 padrão na parte inferior da janela do \textit{DevTools}, o que permite ao desenvolvedor inspecionar e modificar o código-fonte enquanto 
@@ -475,9 +472,22 @@ mantém acesso simultâneo a outros painéis \cite{chrome-quick-source}. Esta fu
 "Fontes" (\textit{Sources}) \ref{sec:chrome-sources} principal e outras ferramentas. O painel "Origem rápida" abre automaticamente o último 
 arquivo editado na ferramenta "Fontes" e permite a abertura de outros arquivos através de atalhos de teclado (\textit{Command+P} ou \textit{Ctrl+P}), 
 que são contextualmente redirecionados para este painel quando ele está em foco \cite{chrome-quick-source}.
-
+\begin{figure}[!htb]
+    \centering
+    \caption{Ferramenta "Origem rápida" do Chrome Devtools}
+    \includegraphics[width=0.65 \linewidth]{assets/tools/chrome-quick-source.png}\\
+    {\footnotesize Fonte: Chrome for Developers}
+    \label{fig:chrome-quick-source}
+\end{figure}
 \subsection{WebAudio}
 \label{sec:chrome-webaudio}
+
+O painel "\textit{WebAudio}", apresentado na figura \ref{fig:chrome-webaudio}, é uma ferramenta de diagnóstico que exibe métricas de 
+desempenho para instâncias de \textit{AudioContext} em aplicações que utilizam a API \textit{WebAudio} \cite{chrome-webaudio}. Após a seleção de um contexto de áudio 
+específico, o painel apresenta métricas chave, incluindo o Estado (\textit{State}) operacional (por exemplo, \textit{running}, \textit{suspended}), a 
+Taxa de Amostragem (\textit{Sample Rate}) em Hz, o Tamanho do \textit{Buffer} de \textit{Callback} (\textit{Callback Buffer Size}) em quadros e o Número Máximo de 
+Canais de Saída (\textit{Max Output Channel Count}) \cite{chrome-webaudio}. Adicionalmente, a ferramenta monitora em tempo real o Intervalo de \textit{Callback} (\textit{Callback Interval}) 
+e a Capacidade de Renderização (\textit{Render Capacity}) do processador de áudio.
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "WebAudio" do Chrome Devtools}
@@ -485,13 +495,13 @@ que são contextualmente redirecionados para este painel quando ele está em foc
     {\footnotesize Fonte: Chrome for Developers}
     \label{fig:chrome-webaudio}
 \end{figure}
-O painel "\textit{WebAudio}", apresentado na figura \ref{fig:chrome-webaudio}, é uma ferramenta de diagnóstico que exibe métricas de 
-desempenho para instâncias de \textit{AudioContext} em aplicações que utilizam a API \textit{WebAudio} \cite{chrome-webaudio}. Após a seleção de um contexto de áudio 
-específico, o painel apresenta métricas chave, incluindo o Estado (\textit{State}) operacional (por exemplo, \textit{running}, \textit{suspended}), a 
-Taxa de Amostragem (\textit{Sample Rate}) em Hz, o Tamanho do \textit{Buffer} de \textit{Callback} (\textit{Callback Buffer Size}) em quadros e o Número Máximo de 
-Canais de Saída (\textit{Max Output Channel Count}) \cite{chrome-webaudio}. Adicionalmente, a ferramenta monitora em tempo real o Intervalo de \textit{Callback} (\textit{Callback Interval}) 
-e a Capacidade de Renderização (\textit{Render Capacity}) do processador de áudio.
 \subsection{Sensores}
+
+O painel "Sensores" (\textit{Sensors}), ilustrado na figura \ref{fig:chrome-sensors}, é uma ferramenta de emulação projetada para simular 
+diversas entradas de \textit{hardware} e estados do dispositivo. Suas principais funcionalidades incluem a substituição de dados de 
+geolocalização, a simulação de orientação do dispositivo, a forçagem de eventos de toque e a emulação de estados da API \textit{Idle Detection} 
+(detector inativo) \cite{chrome-sensors}. Adicionalmente, a ferramenta viabiliza a substituição do valor de simultaneidade de \textit{hardware} 
+(\textit{navigator.hardwareConcurrency}) e a simulação de estados da API \textit{Compute Pressure} (pressão da \textit{CPU}).
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Sensores" do Chrome Devtools}
@@ -499,15 +509,16 @@ e a Capacidade de Renderização (\textit{Render Capacity}) do processador de á
     {\footnotesize Fonte: Chrome for Developers}
     \label{fig:chrome-sensors}
 \end{figure}
-O painel "Sensores" (\textit{Sensors}), ilustrado na figura \ref{fig:chrome-sensors}, é uma ferramenta de emulação projetada para simular 
-diversas entradas de \textit{hardware} e estados do dispositivo. Suas principais funcionalidades incluem a substituição de dados de 
-geolocalização, a simulação de orientação do dispositivo, a forçagem de eventos de toque e a emulação de estados da API \textit{Idle Detection} 
-(detector inativo) \cite{chrome-sensors}. Adicionalmente, a ferramenta viabiliza a substituição do valor de simultaneidade de \textit{hardware} 
-(\textit{navigator.hardwareConcurrency}) e a simulação de estados da API \textit{Compute Pressure} (pressão da \textit{CPU}).
-
-
+\newpage
 \subsection{WebAuthn} 
 \label{sec:chrome-webauthn}
+
+O painel "WebAuthn", apresentado na figura \ref{fig:chrome-webauthn}, fornece uma interface para a criação e interação com autenticadores virtuais baseados em software, 
+permitindo a depuração da API Web Authentication \cite{chrome-webauthn}. A ferramenta possibilita a ativação de um ambiente de autenticador virtual, 
+no qual desenvolvedores podem adicionar, renomear e remover autenticadores. É possível configurar o protocolo (por exemplo, ctap2, u2f)
+e o transporte (por exemplo, USB, NFC) de cada autenticador, além de registrar credenciais e monitorar seus IDs e contagens de 
+assinaturas durante os testes \cite{chrome-webauthn}.
+
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "WebAuthn" do Chrome Devtools}
@@ -515,9 +526,3 @@ geolocalização, a simulação de orientação do dispositivo, a forçagem de e
     {\footnotesize Fonte: Chrome for Developers}
     \label{fig:chrome-webauthn}
 \end{figure}
-O painel "WebAuthn", apresentado na figura \ref{fig:chrome-webauthn}, fornece uma interface para a criação e interação com autenticadores virtuais baseados em software, 
-permitindo a depuração da API Web Authentication \cite{chrome-webauthn}. A ferramenta possibilita a ativação de um ambiente de autenticador virtual, 
-no qual desenvolvedores podem adicionar, renomear e remover autenticadores. É possível configurar o protocolo (por exemplo, ctap2, u2f)
-e o transporte (por exemplo, USB, NFC) de cada autenticador, além de registrar credenciais e monitorar seus IDs e contagens de 
-assinaturas durante os testes \cite{chrome-webauthn}.
-
