@@ -373,16 +373,39 @@
 % -----------------------------------------------------------------------------
 \makeatletter
 \newcommand{\imprimirfolhadeaprovacao}
-{%
-    \begin{folhadeaprovacao}
-        \vspace*{\fill}
-
-        \begin{tabular}{p{.45\textwidth}p{.45\textwidth}}
-            & \imprimirtextopadraofolhadeaprovacao \\
-        \end{tabular}
-
-        \vspace*{\fill}
-    \end{folhadeaprovacao}
+{
+    \cleardoublepage
+	\thispagestyle{empty}
+	\begin{adjustwidth}{-.5cm}{}
+		\begin{center}
+			\singlespacing
+			\large\textbf{\allcaps{\@author}}\\
+		\end{center}
+		%\vspace{30mm}
+		\vspace{15mm}
+		\begin{center}
+			\large\textbf{\allcaps{\@title}}\par
+		\end{center}
+		%\vspace{60pt}
+		\vspace{10mm}
+		\hfill\begin{minipage}{.5\textwidth}
+				\singlespacing
+				\hyphenpenalty=10000
+				\@goalfulltext\par
+		\end{minipage}
+		%\vspace{15mm}
+		\vspace{10mm}
+		\begin{center}
+		    {\large Data de aprovação: \@approvaldate}
+		    \vspace{0,6cm}
+		    \printevalboard
+		\end{center}
+		\vfill
+		\begin{center}
+			\textbf{\allcaps{\@address}}\par
+			\textbf{\@depositshortdate}\par
+		\end{center}
+	\end{adjustwidth}
 }
 \makeatother
 
@@ -431,4 +454,39 @@
             \end{SingleSpacing}
         \end{minipage}
     \end{flushright}
+}
+
+\newcommand{\approvalpage}{
+    \cleardoublepage
+	\thispagestyle{empty}
+	\begin{adjustwidth}{-.5cm}{}
+		\begin{center}
+			\singlespacing
+			\large\textbf{\allcaps{\@author}}\\
+		\end{center}
+		%\vspace{30mm}
+		\vspace{15mm}
+		\begin{center}
+			\large\textbf{\allcaps{\@title}}\par
+		\end{center}
+		%\vspace{60pt}
+		\vspace{10mm}
+		\hfill\begin{minipage}{.5\textwidth}
+				\singlespacing
+				\hyphenpenalty=10000
+				\@goalfulltext\par
+		\end{minipage}
+		%\vspace{15mm}
+		\vspace{10mm}
+		\begin{center}
+		    {\large Data de aprovação: \@approvaldate}
+		    \vspace{0,6cm}
+		    \printevalboard
+		\end{center}
+		\vfill
+		\begin{center}
+			\textbf{\allcaps{\@address}}\par
+			\textbf{\@depositshortdate}\par
+		\end{center}
+	\end{adjustwidth}
 }

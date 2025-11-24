@@ -1,0 +1,36 @@
+\chapter{Resultados}
+A análise realizada neste estudo apresentou um panorama sobre as ferramentas de desenvolvimento
+nativas dos principais navegadores web modernos. Com base na revisão técnica exploratória, é 
+possível perceber que, apesar da metade dos navegadores analisados oferecerem um conjunto 
+robusto de funcionalidades, há uma variação significativa na adoção e utilização dessas 
+ferramentas pelos desenvolvedores web.
+
+Também foi observado que, embora há a lista de recursos possa ser extensas, todos os navegadores
+analisados oferecem algumas funcionalidades em comum, que inclui a inspeção e edição da árvore 
+DOM e CSS, um console JavaScript interativo, o monitoramento detalhado de requisições de rede e 
+ferramentas de perfilamento de desempenho. No entanto, a profundidade e a usabilidade dessas 
+ferramentas variam consideravelmente entre os navegadores.
+
+A análise técnica das ferramentas de perfilamento revelou abordagens distintas na arquitetura de 
+diagnóstico de desempenho e uso de recursos entre os navegadores. No Google Chrome, observou-se uma 
+segregação funcional clara, onde o painel 'Desempenho' é dedicado exclusivamente à análise de CPU e 
+monitoramento de métricas vitais (Core Web Vitals) através de gráficos de chamas (flame graphs) e 
+árvores de chamadas. Paralelamente, o Chrome oferece um painel de 'Memória' independente, focado em 
+diagnósticos granulares como snapshots de heap, amostragem de alocação e identificação de elementos 
+DOM desconectados para isolar vazamentos de memória.
+
+Em contraste, o Safari Web Inspector adota uma filosofia de visualização holística através da aba 
+'Linhas do Tempo' (Timelines). Esta ferramenta unifica a captura de dados, agregando atividades de 
+rede, layout, JavaScript, CPU e alocações de memória em uma única interface cronológica. Diferente 
+da abordagem do Chrome, o Safari estrutura a análise em duas perspectivas principais: a 'Visualização 
+de Eventos' e a 'Visualização de Quadros' (Frames View), sendo esta última projetada especificamente 
+para analisar o tempo de execução de cada quadro de renderização em comparação com benchmarks de 30 
+e 60 FPS. Essa divergência indica que, enquanto o Chrome prioriza a profundidade de diagnóstico em 
+ferramentas isoladas, o Safari privilegia a correlação de eventos para a análise de fluidez visual.
+
+Além disso, foi notório que ainda existe uma grande espaço para novos trabalhos que explorem
+mais a fundo as necessidades dos desenvolvedores web, visto que grande parte do conteúdo apresentado
+tem como base a documentação oficial dos navegadores, que carece de informações para determinados 
+recursos, e não há atualmente muitos estudos que investiguem e aprofundem o uso prático dessas 
+ferramentas no dia a dia dos desenvolvedores. 
+

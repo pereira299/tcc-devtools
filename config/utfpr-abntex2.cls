@@ -54,6 +54,179 @@
 % Configurações gerais
 % -----------------------------------------------------------------------------
 
+\RequirePackage{pdfpages}
+\RequirePackage{lastpage}
+\RequirePackage{chngpage}
+
+\def\authorbib#1{\gdef\@authorbib{#1}}%
+\def\@authorbib{\@latex@error{No \noexpand\authorbib given}\@ehc}%
+
+\def\titleen#1{\gdef\@titleen{#1}}%
+\def\@titleen{\@latex@error{No \noexpand\titleen given}\@ehc}%
+
+\def\advisor#1{\gdef\@advisor{#1}}%
+\def\@advisor{\@latex@error{No \noexpand\advisor given}\@ehc}%
+
+\def\coadvisor#1{\gdef\@coadvisor{#1}}%
+
+\def\address#1{\gdef\@address{#1}}%
+\def\@address{\@latex@error{No \noexpand\address given}\@ehc}%
+
+\def\addressen#1{\gdef\@addressen{#1}}%
+\def\@addressen{\@latex@error{No \noexpand\addressen given}\@ehc}%
+
+\def\university#1{\gdef\@university{#1}}%
+\def\@university{\@latex@error{No \noexpand\university given}\@ehc}%
+
+\def\universityen#1{\gdef\@universityen{#1}}%
+\def\@universityen{\@latex@error{No \noexpand\universityen given}\@ehc}%
+
+\def\universitycampus#1{\gdef\@universitycampus{#1}}%
+\def\@universitycampus{\@latex@error{No \noexpand\universitycampus given}\@ehc}%
+
+\def\universityunit#1{\gdef\@universityunit{#1}}%
+\def\@universityunit{\@latex@error{No \noexpand\universityunit given}\@ehc}%
+
+\def\program#1{\gdef\@program{#1}}%
+\def\@program{\@latex@error{No \noexpand\program given}\@ehc}%
+
+\def\programen#1{\gdef\@programen{#1}}%
+\def\@programen{\@latex@error{No \noexpand\programen given}\@ehc}%
+
+\def\course#1{\gdef\@course{#1}}%
+\def\@course{\@latex@error{No \noexpand\course given}\@ehc}%
+
+\def\depositshortdate#1{\gdef\@depositshortdate{#1}}%
+\def\@depositshortdate{\@latex@error{No \noexpand\depositshortdate given}\@ehc}%
+
+\def\approvaldate#1{\gdef\@approvaldate{#1}}%
+\def\@approvaldate{\@latex@error{No \noexpand\approvaldate given}\@ehc}%
+
+
+%CC
+\def\licenca#1{\gdef\@licenca{#1}}%
+\def\@licenca{\@latex@error{No \noexpand\licenca given}\@ehc}%
+
+\def\goal#1{\gdef\@goal{#1}}%
+\def\@goal{\@latex@error{No \noexpand\goal given}\@ehc}%
+
+\def\degree#1{\gdef\@degree{#1}}%
+\def\@degree{\@latex@error{No \noexpand\degree given}\@ehc}%
+
+\def\degreetype#1{\gdef\@degreetype{#1}}%
+\def\@degreetype{\@latex@error{No \noexpand\degreetype given}\@ehc}%
+
+\def\documenttype#1{\gdef\@documenttype{#1}}%
+\def\@documenttype{\@latex@error{No \noexpand\documenttype given}\@ehc}%
+
+\def\documenttypeen#1{\gdef\@documenttypeen{#1}}%
+\def\@documenttypeen{\@latex@error{No \noexpand\documenttypeen given}\@ehc}%
+
+\def\degreearea#1{\gdef\@degreearea{#1}}%
+\def\@degreearea{\@latex@error{No \noexpand\degreearea given}\@ehc}%
+
+%% Definições de variáveis
+\newcommand{\TipoDeDocumento}[1]{\providecommand{\imprimirtipodedocumento}{#1}}%% Tipo de documento
+\newcommand{\DocumentType}[1]{\providecommand{\printdocumenttype}{#1}}%% Document type
+\newcommand{\NivelDeFormacao}[1]{\providecommand{\imprimirniveldeformacao}{#1}}%% Nível de formação
+\newcommand{\FormationLevel}[1]{\providecommand{\printformationlevel}{#1}}%% Formation level
+\newcommand{\TituloDoDocumento}[1]{\providecommand{\imprimirtitulododocumento}{#1}}%% Título do documento
+\newcommand{\DocumentTitle}[1]{\providecommand{\printdocumenttitle}{#1}}%% Document title
+\newcommand{\TituloEmMultiplasLinhas}[1]{\providecommand{\imprimirtituloemmultiplaslinhas}{#1}}%% Título em multiplas linhas
+\newcommand{\DescricaoDoDocumento}[1]{\providecommand{\imprimirdescricaododocumento}{#1}}%% Descrição do documento
+\newcommand{\TituloDaFichaCatalografica}[1]{%% Título da ficha catalográfica
+  \providecommand{\imprimirtitulodafichacatalografica}{#1}%%
+}
+\newcommand{\TextoDeAprovacao}[1]{\providecommand{\imprimirtextodeaprovacao}{#1}}%% Texto de aprovação
+\newcommand{\AvisoDeAprovacao}[1]{\providecommand{\imprimiravisodeaprovacao}{#1}}%% Aviso de aprovação
+\newcommand{\NumeroDaTeseOuDissertacao}[1]{\providecommand{\imprimirnumerodateseoudissertacao}{#1}}%% Número da tese ou dissertação
+\newcommand{\NumeroDaPublicacao}[1]{\providecommand{\imprimirnumerodapublicacao}{#1}}%% Número da publicação
+\newcommand{\NumeroDaFichaCatalografica}[1]{%% Número da ficha catalográfica
+  \providecommand{\imprimirnumerodafichacatalografica}{#1}%%
+}
+\newcommand{\CDDOuCDU}[1]{\providecommand{\imprimircddoucdu}{#1}}%% CDD ou CDU
+\newcommand{\TituloPretendido}[1]{\providecommand{\imprimirtitulopretendido}{#1}}%% Título pretendido
+\newcommand{\NomeDoAutor}[1]{\providecommand{\imprimirnomedoautor}{#1}}%% Nome completo do(a) autor(a)
+%\newcommand{\SobrenomeDoAutor}[1]{\providecommand{\imprimirsobrenomedoautor}{#1}}%% Sobrenome do(a) autor(a)
+%\newcommand{\PrenomeDoAutor}[1]{\providecommand{\imprimirprenomedoautor}{#1}}%% Prenome do(a) autor(a)
+\newcommand{\AtribuiOutroAutor}[1]{%% Insere ou remove outro(a) autor(a)
+  \ifthenelse{\equal{\imprimirtipodedocumento}{Trabalho de Conclusão de Curso}}%% Verificação do tipo de documento
+    {\providecommand{\imprimiratribuioutroautor}{#1}}%% Insere ou remove outro(a) autor(a)
+    {\providecommand{\imprimiratribuioutroautor}{false}}%% Remove outro(a) autor(a)
+}
+\newcommand{\NomeDoOutroAutor}[1]{\providecommand{\imprimirnomedooutroautor}{#1}}%% Nome completo do(a) outro(a) autor(a)
+\newcommand{\SobrenomeDoOutroAutor}[1]{\providecommand{\imprimirsobrenomedooutroautor}{#1}}%% Sobrenome do(a) outro(a) autor(a)
+\newcommand{\PrenomeDoOutroAutor}[1]{\providecommand{\imprimirprenomedooutroautor}{#1}}%% Prenome do(a) outro(a) autor(a)
+\newcommand{\AtribuicaoOrientador}[1]{\providecommand{\imprimiratribuicaoorientador}{#1}}%% Atribuição "orientador(a)"
+\newcommand{\TituloDoOrientador}[1]{\providecommand{\imprimirtitulodoorientador}{#1}}%% Título do(a) orientador(a)
+\newcommand{\NomeDoOrientador}[1]{\providecommand{\imprimirnomedoorientador}{#1}}%% Nome completo do(a) orientador(a)
+\newcommand{\SobrenomeDoOrienador}[1]{\providecommand{\imprimirsobrenomedoorientador}{#1}}%% Sobrenome do(a) orientador(a)
+\newcommand{\PrenomeDoOrientador}[1]{\providecommand{\imprimirprenomedoorientador}{#1}}%% Prenome do(a) orientador(a)
+\newcommand{\AtribuiCoorientador}[1]{\providecommand{\imprimiratribuicoorientador}{#1}}%% Insere ou remove o(a) coorientador(a)
+\newcommand{\AtribuicaoCoorientador}[1]{\providecommand{\imprimiratribuicaocoorientador}{#1}}%% Atribuição "coorientador(a)"
+\newcommand{\TituloDoCoorientador}[1]{\providecommand{\imprimirtitulodocoorientador}{#1}}%% Título do(a) coorientador(a)
+\newcommand{\NomeDoCoorientador}[1]{\providecommand{\imprimirnomedocoorientador}{#1}}%% Nome completo do(a) coorientador(a)
+\newcommand{\SobrenomeDoCoorienador}[1]{\providecommand{\imprimirsobrenomedocoorientador}{#1}}%% Sobrenome do(a) coorientador(a)
+\newcommand{\PrenomeDoCoorientador}[1]{\providecommand{\imprimirprenomedocoorientador}{#1}}%% Prenome do(a) coorientador(a)
+\newcommand{\Institution}[1]{\providecommand{\printinstitution}{#1}}%% Institution name
+\newcommand{\Cidade}[1]{\providecommand{\imprimircidade}{#1}}%% Nome da cidade (câmpus)
+\newcommand{\Diretoria}[1]{\providecommand{\imprimirdiretoria}{Diretoria de #1}}%% Diretoria
+\newcommand{\Departamento}[1]{\providecommand{\imprimirdepartamento}{#1}}%% Nome do departamento
+\newcommand{\Curso}[1]{\providecommand{\imprimircurso}{#1}}%% Nome do curso
+\newcommand{\Course}[1]{\providecommand{\printcourse}{#1}}%% Course name
+\newcommand{\AreaDeConcentracao}[1]{\providecommand{\imprimirareadeconcentracao}{#1}}%% Nome da área de concentração
+\newcommand{\TituloDoResponsavelTCC}[1]{\providecommand{\imprimirtitulodoresponsaveltcc}{#1}}%% Título do(a) responsável pelos TCC
+\newcommand{\NomeDoResponsavelTCC}[1]{%% Nome completo do(a) responsável pelos TCC
+  \providecommand{\imprimirnomedoresponsaveltcc}{#1}%%
+}
+\newcommand{\AtribuicaoCoordenador}[1]{\providecommand{\imprimiratribuicaocoordenador}{#1}}%% Atribuição "coordenador(a)" do curso
+\newcommand{\TituloDoCoordenador}[1]{\providecommand{\imprimirtitulodocoordenador}{#1}}%% Título do(a) coordenador(a) do curso
+\newcommand{\NomeDoCoordenador}[1]{\providecommand{\imprimirnomedocoordenador}{#1}}%% Nome completo do(a) coordenador(a) do curso
+\newcommand{\SiglaDoPPG}[1]{\providecommand{\imprimirsigladoppg}{#1}}%% Logo do programa de pós-graduação
+\newcommand{\MembroAIgualOrientador}[1]{\providecommand{\imprimirmembroaigualorientador}{#1}}%% Membro A igual ao(à) orientador(a)
+\newcommand{\MembroA}[1]{\providecommand{\imprimirmembroa}{#1}}%% Nome completo do membro A
+\newcommand{\TituloDoMembroA}[1]{\providecommand{\imprimirtitulodomembroa}{#1}}%% Título do membro A
+\newcommand{\InstituicaoDoMembroA}[1]{\providecommand{\imprimirinstituicaodomembroa}{#1}}%% Nome da instituição do membro A
+\newcommand{\MembroB}[1]{\providecommand{\imprimirmembrob}{#1}}%% Nome completo do membro B
+\newcommand{\TituloDoMembroB}[1]{\providecommand{\imprimirtitulodomembrob}{#1}}%% Título do membro B
+\newcommand{\InstituicaoDoMembroB}[1]{\providecommand{\imprimirinstituicaodomembrob}{#1}}%% Nome da instituição do membro B
+\newcommand{\MembroC}[1]{\providecommand{\imprimirmembroc}{#1}}%% Nome completo do membro C
+\newcommand{\TituloDoMembroC}[1]{\providecommand{\imprimirtitulodomembroc}{#1}}%% Título do membro C
+\newcommand{\InstituicaoDoMembroC}[1]{\providecommand{\imprimirinstituicaodomembroc}{#1}}%% Nome da instituição do membro C
+\newcommand{\MembroD}[1]{\providecommand{\imprimirmembrod}{#1}}%% Nome completo do membro D
+\newcommand{\TituloDoMembroD}[1]{\providecommand{\imprimirtitulodomembrod}{#1}}%% Título do membro D
+\newcommand{\InstituicaoDoMembroD}[1]{\providecommand{\imprimirinstituicaodomembrod}{#1}}%% Nome da instituição do membro D
+\newcommand{\MembroE}[1]{\providecommand{\imprimirmembroe}{#1}}%% Nome completo do membro E
+\newcommand{\TituloDoMembroE}[1]{\providecommand{\imprimirtitulodomembroe}{#1}}%% Título do membro E
+\newcommand{\InstituicaoDoMembroE}[1]{\providecommand{\imprimirinstituicaodomembroe}{#1}}%% Nome da instituição do membro E
+\newcommand{\AtribuiMembroF}[1]{\providecommand{\imprimiratribuimembrof}{#1}}%% Insere ou remove o membro F
+\newcommand{\MembroF}[1]{\providecommand{\imprimirmembrof}{#1}}%% Nome completo do membro F
+\newcommand{\TituloDoMembroF}[1]{\providecommand{\imprimirtitulodomembrof}{#1}}%% Título do membro F
+\newcommand{\InstituicaoDoMembroF}[1]{\providecommand{\imprimirinstituicaodomembrof}{#1}}%% Nome da instituição do membro F
+\newcommand{\AtribuiMembroG}[1]{\providecommand{\imprimiratribuimembrog}{#1}}%% Insere ou remove o membro G
+\newcommand{\MembroG}[1]{\providecommand{\imprimirmembrog}{#1}}%% Nome completo do membro G
+\newcommand{\TituloDoMembroG}[1]{\providecommand{\imprimirtitulodomembrog}{#1}}%% Título do membro G
+\newcommand{\InstituicaoDoMembroG}[1]{\providecommand{\imprimirinstituicaodomembrog}{#1}}%% Nome da instituição do membro G
+\newcommand{\Dia}[1]{\providecommand{\imprimirdia}{#1}}%% Dia com número de dígitos exatos
+\newcommand{\MesPorExtenso}[1]{\providecommand{\imprimirmesporextenso}{#1}}%% Mês por extenso
+\newcommand{\Ano}[1]{\providecommand{\imprimirano}{#1}}%% Ano com quatro dígitos
+\newcommand{\NumeroDePalavrasChave}[1]{\providecommand{\imprimirnumerodepalavraschave}{#1}}%% Número de palavras-chave (máximo 5)
+\newcommand{\PalavraChaveA}[1]{\providecommand{\imprimirpalavrachavea}{\lowercase{#1}}}%% Palavra-chave A
+\newcommand{\PalavraChaveB}[1]{\providecommand{\imprimirpalavrachaveb}{\lowercase{{#1}}}}%% Palavra-chave B
+\newcommand{\PalavraChaveC}[1]{\providecommand{\imprimirpalavrachavec}{\lowercase{#1}}}%% Palavra-chave C
+\newcommand{\PalavraChaveD}[1]{\providecommand{\imprimirpalavrachaved}{\lowercase{#1}}}%% Palavra-chave D
+\newcommand{\PalavraChaveE}[1]{\providecommand{\imprimirpalavrachavee}{\lowercase{#1}}}%% Palavra-chave E
+\newcommand{\NumeroDeKeywords}[1]{\providecommand{\imprimirnumerodekeywords}{#1}}%% Número de keywords (máximo 5)
+\newcommand{\KeywordA}[1]{\providecommand{\imprimirkeyworda}{\lowercase{#1}}}%% Keyword A
+\newcommand{\KeywordB}[1]{\providecommand{\imprimirkeywordb}{\lowercase{#1}}}%% Keyword B
+\newcommand{\KeywordC}[1]{\providecommand{\imprimirkeywordc}{\lowercase{#1}}}%% Keyword C
+\newcommand{\KeywordD}[1]{\providecommand{\imprimirkeywordd}{\lowercase{#1}}}%% Keyword D
+\newcommand{\KeywordE}[1]{\providecommand{\imprimirkeyworde}{\lowercase{#1}}}%% Keyword E
+\newcommand{\imprimirppgoudepartamento}{%% Programa de pós-graduação ou departamento
+  \ifthenelse{\equal{\imprimirtipodedocumento}{Tese}\or\equal{\imprimirtipodedocumento}{Dissertação}}%% Tese ou dissertação
+  {Programa de Pós-Graduação em \imprimircurso}%% Programa de pós-graduação
+  {\imprimirdepartamento}%% Departamento
+}
 % Retira o espaço extra desnecessário nas frases
 \frenchspacing
 
@@ -84,6 +257,9 @@
 % -----------------------------------------------------------------------------
 % Comandos de dados
 % -----------------------------------------------------------------------------
+
+
+\newcommand{\fonteTexto}[1]{\renewcommand{\familydefault}{#1}}
 
 % Comandos de dados - Departamento
 \providecommand{\imprimirdepartamento}{}
@@ -373,16 +549,39 @@
 % -----------------------------------------------------------------------------
 \makeatletter
 \newcommand{\imprimirfolhadeaprovacao}
-{%
-    \begin{folhadeaprovacao}
-        \vspace*{\fill}
-
-        \begin{tabular}{p{.45\textwidth}p{.45\textwidth}}
-            & \imprimirtextopadraofolhadeaprovacao \\
-        \end{tabular}
-
-        \vspace*{\fill}
-    \end{folhadeaprovacao}
+{
+    \cleardoublepage
+	\thispagestyle{empty}
+	\begin{adjustwidth}{-.5cm}{}
+		\begin{center}
+			\singlespacing
+			\large\textbf{\allcaps{\@author}}\\
+		\end{center}
+		%\vspace{30mm}
+		\vspace{15mm}
+		\begin{center}
+			\large\textbf{\allcaps{\@title}}\par
+		\end{center}
+		%\vspace{60pt}
+		\vspace{10mm}
+		\hfill\begin{minipage}{.5\textwidth}
+				\singlespacing
+				\hyphenpenalty=10000
+				\@goalfulltext\par
+		\end{minipage}
+		%\vspace{15mm}
+		\vspace{10mm}
+		\begin{center}
+		    {\large Data de aprovação: \@approvaldate}
+		    \vspace{0,6cm}
+		    \printevalboard
+		\end{center}
+		\vfill
+		\begin{center}
+			\textbf{\allcaps{\@address}}\par
+			\textbf{\@depositshortdate}\par
+		\end{center}
+	\end{adjustwidth}
 }
 \makeatother
 
@@ -432,3 +631,55 @@
         \end{minipage}
     \end{flushright}
 }
+
+\newcommand{\approvalpage}{
+    \cleardoublepage
+	\thispagestyle{empty}
+	\begin{adjustwidth}{-.5cm}{}
+		\begin{center}
+			\singlespacing
+			\large\textbf{\allcaps{\@author}}\\
+		\end{center}
+		%\vspace{30mm}
+		\vspace{15mm}
+		\begin{center}
+			\large\textbf{\allcaps{\@title}}\par
+		\end{center}
+		%\vspace{60pt}
+		\vspace{10mm}
+		\hfill\begin{minipage}{.5\textwidth}
+				\singlespacing
+				\hyphenpenalty=10000
+				\@goalfulltext\par
+		\end{minipage}
+		%\vspace{15mm}
+		\vspace{10mm}
+		\begin{center}
+		    {\large Data de aprovação: \@approvaldate}
+		    \vspace{0,6cm}
+		    \printevalboard
+		\end{center}
+		\vfill
+		\begin{center}
+			\textbf{\allcaps{\@address}}\par
+			\textbf{\@depositshortdate}\par
+		\end{center}
+	\end{adjustwidth}
+}
+
+\newcommand{\incluirlistadequadros}{%% Definição do comando para inclusão da lista de quadros
+  \pdfbookmark[0]{\listtabframedname}{lod}%% Marcador
+  \begin{Spacing}{1.5}%% Espaçamento simples entre linhas
+    \listoftabframeds*%% Impressão da lista de quadros
+  \end{Spacing}
+  \cleardoublepage%% Página de verso
+}
+
+\newcommand{\incluirlistadeilustracoes}{%% Definição do comando para inclusão da lista de ilustrações
+  \pdfbookmark[0]{\listfigurename}{lof}%% Marcador
+  \begin{Spacing}{1.5}%% Espaçamento simples entre linhas
+    \listoffigures*%% Impressão da lista de figuras
+  \end{Spacing}
+  \cleardoublepage%% Página de verso
+}
+

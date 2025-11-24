@@ -1,38 +1,90 @@
+\section{Tabela comparativa das ferramentas nativas dos navegadores}
+Diante das diversas funcionalidades oferecidas pelas devtools dos principais navegadores, 
+as tabelas apresenta uma comparação das ferramentas nativas disponíveis no Google Chrome, 
+Mozilla Firefox, Microsoft Edge e Apple Safari. Esta comparação visa auxiliar desenvolvedores 
+na escolha do navegador mais adequado às suas necessidades específicas de desenvolvimento e 
+depuração web.
+
 \begin{table}[H]
+\caption{Comparação das ferramentas nativas dos navegadores - Parte 1}
 \centering
 \begin{tabular}{l l l l l}
 \hline
-\textbf{Funcionalidades / Navegadores} & \textbf{Google Chrome} & \textbf{Mozilla Firefox} & \textbf{Microsoft Edge} & \textbf{Apple Safari} \\
+\textbf{Funcionalidades / Navegadores} & \textbf{Google Chrome} & \textbf{Mozilla Firefox} \\
 \hline
-
-Inspeção de elementos & Elementos & Inspetor de Página & Elementos & Elementos \\
-
-Console & Console & Console & Console & Console \\
-
-Depurador JavaScript & Origens & Depurador JavaScript & Origens & Fontes \\\
-Monitoramento de Rede & Rede & Monitor de Rede & Rede & Rede \\
-
-Análise de desempenho & Desempenho & Painel de desempenho & Linha do tempo & -- \\
-
-Análise de Memória & Memória & Memória & Linha do tempo & -- \\
-
-Armazenamento de Aplicação & Aplicativos & Inspetor de Armazenamento & Aplicativo & Armazenamento \\
-
-Edição e Manipulação de estilos & Elementos & Editor de estilos & Elementos & Elementos \\
-Inspeção de segurança & Segurança & -- & Segurança & Rede \\
-
-Emulação de dispositivos & Modo Dispositivo & Responsive Design Mode & Modo Dispositivo & Responsive Design Mode \\
-
-Inspeção e edição de animações & Animações & Inspetor de Página & Animações & Gráficos \\
-
-Análise de Acessibilidade & Lighthouse & Inspetor de Acessibilidade & Lighthouse & Auditoria \\
-
-Auditoria de qualidade e desempenho & Lighthouse & -- & Lighthouse & Auditoria \\
-
-Cobertura de código & Cobertura & -- & Cobertura & -- \\
-
-Gravar fluxo do usuário & Gravador & -- & Gravador & -- \\
-
+Inspecionar, editar e depurar HTML e CSS & Elements & Inspector \\ \hline
+Verificar registros de erros & Console & Web Console \\ \hline
+Executar código JavaScript & Console & Web Console \\ \hline
+Verificar código-fonte & Sources & Debugger \\ \hline
+Verificar registros de rede & Network & Network Monitor \\ \hline
+Analisar desempenho & Performance & Performance \\ \hline
+Monitorar uso de memória & Memory & Memory \\ \hline
+Gerenciar armazenamento da aplicação web & Application & Storage \\ \hline
+Entender a hierarquia do DOM & Elements & Inspector \\ \hline
+Inspecionar e modificar animações CSS & Animations & - \\ \hline
+Verificar mudanças em arquivos & Changes & - \\ \hline
+Encontrar trechos de código não utilizados & Coverage & - \\ \hline
+Diagnosticar falhas da aplicação web & - & - \\ \hline
+Relatório de estilos utilizados & CSS Overview & - \\ \hline
+Visualizar URL de recursos & Network / Sources & Network Monitor \\ \hline
+Encontrar e corrigir problemas & Issues & - \\ \hline
+Inspecionar players de mídia & Media & - \\ \hline
+Visualizar objetos em memória & Memory Inspector & - \\ \hline
+Simular condições de rede & Network conditions & - \\ \hline
+Realizar requisições HTTP & - & - \\ \hline
+Bloquear requisições de rede & Network request blocking & - \\ \hline
+Medir o desempenho da aplicação & Performance & Performance \\ \hline
+Gravar interações do usuário & Recorder & - \\ \hline
+Emular deficiências visuais & Rendering & Accessibility \\ \hline
+Encontrar recursos específicos & Search & - \\ \hline
+Inspecionar a segurança da aplicação & Security & - \\ \hline
+Emular sensores de dispositivos & Sensors & - \\ \hline
+Monitorar carregamento de arquivos & - & - \\ \hline
+Monitorar o gráfico de nós WebAudio & WebAudio & - \\ \hline
+Emular autenticação & WebAuthn & - \\ \hline
 \hline
 \end{tabular}
+\legend{Fonte: Elaborado pelo autor.}
+\end{table}
+
+\begin{table}[H]
+\caption{Comparação das ferramentas nativas dos navegadores - Parte 2}
+\centering
+\begin{tabular}{l l l l l}
+\hline
+\textbf{Funcionalidades / Navegadores} & \textbf{Microsoft Edge} & \textbf{Apple Safari} \\
+\hline
+Inspecionar, editar e depurar HTML e CSS & Elements & Elements \\ \hline
+Verificar registros de erros & Console & Console \\ \hline
+Executar código JavaScript & Console & Console \\ \hline
+Verificar código-fonte & Sources & Sources \\ \hline
+Verificar registros de rede & Network & Network \\ \hline
+Analisar desempenho & Performance & Timelines \\ \hline
+Monitorar uso de memória & Memory & Timelines \\ \hline
+Gerenciar armazenamento da aplicação web & Application & Storage \\ \hline
+Entender a hierarquia do DOM & Elements & Elements \\ \hline
+Inspecionar e modificar animações CSS & Animations & Timelines \\ \hline
+Verificar mudanças em arquivos & Changes & Changes \\ \hline
+Encontrar trechos de código não utilizados & Coverage & - \\ \hline
+Diagnosticar falhas da aplicação web & Crash analyzer & - \\ \hline
+Relatório de estilos utilizados & CSS Overview & - \\ \hline
+Visualizar URL de recursos & Network / Sources & Sources / Network \\ \hline
+Encontrar e corrigir problemas & Issues & Audit \\ \hline
+Inspecionar players de mídia & Media & Timelines \\ \hline
+Visualizar objetos em memória & Memory Inspector & - \\ \hline
+Simular condições de rede & Network conditions & - \\ \hline
+Realizar requisições HTTP & Network Console & - \\ \hline
+Bloquear requisições de rede & Network request blocking & - \\ \hline
+Medir o desempenho da aplicação & Performance & Timelines \\ \hline
+Gravar interações do usuário & Recorder & - \\ \hline
+Emular deficiências visuais & Rendering & - \\ \hline
+Encontrar recursos específicos & Search & - \\ \hline
+Inspecionar a segurança da aplicação & Security & - \\ \hline
+Emular sensores de dispositivos & Sensors & - \\ \hline
+Monitorar carregamento de arquivos & Source Maps Monitor & - \\ \hline
+Monitorar o gráfico de nós WebAudio & WebAudio & - \\ \hline
+Emular autenticação & WebAuthn & - \\ \hline
+\hline
+\end{tabular}
+\legend{Fonte: Elaborado pelo autor.}
 \end{table}

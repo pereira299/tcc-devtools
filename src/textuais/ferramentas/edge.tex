@@ -8,11 +8,11 @@
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-elements}
 \end{figure}
-O painel \textbf{Elementos} (Elements) oferece uma interface robusta para a inspeção e manipulação do Document Object 
+O painel \textbf{Elementos} (Elements), exibido na figura \ref{fig:edge-elements}, oferece uma interface robusta para a inspeção e manipulação do Document Object 
 Model (DOM) e das Folhas de Estilo em Cascata (CSS) em tempo real. Ele proporciona uma representação interativa da árvore 
-DOM, refletindo o estado dinâmico da aplicação, que pode divergir do HTML fonte original devido a manipulações via JavaScript. 
+DOM, refletindo o estado dinâmico da aplicação, que pode divergir do HTML fonte original devido a manipulações via JavaScript \cite{edge-elements}. 
 A ferramenta facilita a depuração de layout através da edição direta de atributos HTML, conteúdo textual e propriedades CSS, 
-permitindo ainda a simulação de pseudo-estados (ex: \textit{:hover}) e a análise do modelo de caixa (box model).
+permitindo ainda a simulação de pseudo-estados (ex: \textit{:hover}) e a análise do modelo de caixa (box model) \cite{edge-elements}.
 
 \subsection{Console}
 \begin{figure}[!htb]
@@ -22,11 +22,11 @@ permitindo ainda a simulação de pseudo-estados (ex: \textit{:hover}) e a anál
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-console}
 \end{figure}
-O \textbf{Console} (Console) atua como um ambiente interativo de Read-Eval-Print Loop (REPL) para a execução de scripts 
+O \textbf{Console} (Console), apresentado na figura \ref{fig:edge-console}, atua como um ambiente interativo de Read-Eval-Print Loop (REPL) para a execução de scripts 
 JavaScript. Sua função primária é o diagnóstico de tempo de execução, servindo como o principal canal para o registro 
-(\textit{logging}) de erros, advertências e saídas diagnósticas (ex: \texttt{console.log()}). Permite a interação direta 
+(\textit{logging}) de erros, advertências e saídas diagnósticas (ex: \texttt{console.log()}) \cite{edge-console}. Permite a interação direta 
 com o contexto da página, viabilizando a inspeção e manipulação programática do DOM e do objeto \textit{Window}, além do 
-teste de expressões e a utilização de funções utilitárias de depuração.
+teste de expressões e a utilização de funções utilitárias de depuração \cite{edge-console}.
 
 \subsection{Fontes}
 \begin{figure}[!htb]
@@ -36,11 +36,11 @@ teste de expressões e a utilização de funções utilitárias de depuração.
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-sources}
 \end{figure}
-O painel \textbf{Fontes} (Sources) funciona como um ambiente de depuração de código-fonte integrado. É projetado para a 
+O painel \textbf{Fontes} (Sources), ilustrado na figura \ref{fig:edge-sources}, funciona como um ambiente de depuração de código-fonte integrado. É projetado para a 
 análise, edição e depuração de JavaScript front-end. A ferramenta permite a navegação pelos recursos da página, a edição 
-de scripts e a utilização de um depurador de JavaScript. Este último suporta funcionalidades essenciais como a definição 
+de scripts e a utilização de um depurador de JavaScript \cite{edge-sources}. Este último suporta funcionalidades essenciais como a definição 
 de pontos de interrupção (\textit{breakpoints}), a execução passo a passo (\textit{step-through}) do código, a inspeção 
-da pilha de chamadas (\textit{call stack}) e a monitorização de variáveis em escopo.
+da pilha de chamadas (\textit{call stack}) e a monitorização de variáveis em escopo \cite{edge-sources}.
 
 \subsection{Rede}
 \begin{figure}[!htb]
@@ -50,12 +50,12 @@ da pilha de chamadas (\textit{call stack}) e a monitorização de variáveis em 
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-network}
 \end{figure}
-A ferramenta \textbf{Rede} (Network) é um componente de diagnóstico focado na análise do tráfego de rede. Ela monitora e 
+A ferramenta \textbf{Rede} (Network),  ilustrada na figura \ref{fig:edge-network}, é um componente de diagnóstico focado na análise do tráfego de rede. Ela monitora e 
 registra todas as solicitações (requests) e respostas (responses) HTTP/S, incluindo documentos, scripts, folhas de estilo, 
-mídias e chamadas de API (XHR/Fetch). A ferramenta oferece uma análise detalhada de cabeçalhos, códigos de status, conteúdo 
+mídias e chamadas de API (XHR/Fetch) \cite{edge-network}. A ferramenta oferece uma análise detalhada de cabeçalhos, códigos de status, conteúdo 
 e temporização (através de um gráfico de \textit{Waterfall}), sendo crucial para a identificação de gargalos de latência, 
-falhas de requisição e otimização de \textit{payloads}. Permite ainda a simulação de condições de rede adversas 
-(\textit{throttling}).
+falhas de requisição e otimização de \textit{payloads} \cite{edge-network}. Permite ainda a simulação de condições de rede adversas 
+(\textit{throttling}) \cite{edge-network}.
 
 \subsection{Desempenho}
 \begin{figure}[!htb]
@@ -65,12 +65,12 @@ falhas de requisição e otimização de \textit{payloads}. Permite ainda a simu
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-performance}
 \end{figure}
-O painel \textbf{Desempenho} (Performance) é um utilitário de perfilamento (\textit{profiling}) avançado para a análise da 
+O painel \textbf{Desempenho} (Performance), como exibido na figura \ref{fig:edge-performance}, é um utilitário de perfilamento (\textit{profiling}) avançado para a análise da 
 performance de tempo de execução. A ferramenta opera em duas modalidades: um monitoramento em tempo real dos Core Web Vitals 
-(LCP, CLS, INP) e a gravação de um perfil detalhado. Este perfil captura uma linha do tempo da atividade da \textit{thread} 
+(LCP, CLS, INP) e a gravação de um perfil detalhado \cite{edge-performance}. Este perfil captura uma linha do tempo da atividade da \textit{thread} 
 principal, incluindo a execução de JavaScript, operações de renderização (\textit{layout} e \textit{paint}), e eventos de 
-interação. A análise deste traço permite a identificação precisa de gargalos de CPU e operações de longa duração que afetam a 
-responsividade da aplicação.
+interação \cite{edge-performance}. A análise deste traço permite a identificação precisa de gargalos de CPU e operações de longa duração que afetam a 
+responsividade da aplicação .
 
 \subsection{Aplicação}
 \begin{figure}[!htb]
@@ -80,11 +80,11 @@ responsividade da aplicação.
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-application}
 \end{figure}
-A ferramenta \textbf{Aplicação} (Application) proporciona uma interface centralizada para a inspeção e gerenciamento do 
+A ferramenta \textbf{Aplicação} (Application), apresentado na figura \ref{fig:edge-application}, proporciona uma interface centralizada para a inspeção e gerenciamento do 
 armazenamento no lado do cliente. Ela permite a análise e manipulação de mecanismos de armazenamento como Local Storage, 
-Session Storage, IndexedDB, Cookies e Cache Storage. Adicionalmente, é um componente vital para a depuração de Progressive 
+Session Storage, IndexedDB, Cookies e Cache Storage \cite{edge-application}. Adicionalmente, pode ser utilizado para a depuração de Progressive 
 Web Apps (PWAs), oferecendo controle sobre o ciclo de vida dos \textit{Service Workers}, a validação do Manifesto da Aplicação 
-e a inspeção de serviços em segundo plano (\textit{Background Services}).
+e a inspeção de serviços em segundo plano (\textit{Background Services}) \cite{edge-application}.
 
 \subsection{Exibição 3D}
 \begin{figure}[!htb]
@@ -94,11 +94,11 @@ e a inspeção de serviços em segundo plano (\textit{Background Services}).
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-3d-view}
 \end{figure}
-A \textbf{Exibição 3D} (3D View) é um recurso de visualização avançado para a depuração de contextos de renderização complexos. 
+A \textbf{Exibição 3D} (3D View), ilustrada na figura \ref{fig:edge-3d-view},  é um recurso de visualização avançado para a depuração de contextos de renderização complexos. 
 Ao modelar a página em um espaço tridimensional, a ferramenta facilita a identificação de problemas de sobreposição de elementos 
 (z-index), a análise da hierarquia do DOM e a inspeção das camadas de composição (\textit{composited layers}) criadas pelo motor 
-de renderização. A ferramenta segmenta a visualização em abas dedicadas para Camadas Compostas, Z-index e DOM, auxiliando na 
-compreensão da estrutura de renderização.
+de renderização \cite{edge-3d-view}. A ferramenta segmenta a visualização em abas dedicadas para Camadas Compostas, Z-index e DOM, auxiliando na 
+compreensão da estrutura de renderização \cite{edge-3d-view}.
 
 \subsection{Animações}
 \begin{figure}[!htb]
@@ -108,10 +108,10 @@ compreensão da estrutura de renderização.
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-animations}
 \end{figure}
-O inspetor de \textbf{Animações} (Animation Inspector) é um utilitário focado na inspeção e depuração de animações declarativas. 
+O inspetor de \textbf{Animações} (Animation Inspector), exibido na figura \ref{fig:edge-animations}, é um utilitário focado na inspeção e depuração de animações declarativas. 
 A ferramenta captura sequências de animação (CSS Animations, CSS Transitions e Web Animations), agrupando-as com base em seu 
-tempo de início. Permite a desaceleração, repetição e análise do código-fonte das animações, além de possibilitar a modificação 
-interativa de parâmetros como duração, atraso (\textit{delay}) e temporização de \textit{keyframes}.
+tempo de início \cite{edge-animations}. Permite a desaceleração, repetição e análise do código-fonte das animações, além de possibilitar a modificação 
+interativa de parâmetros como duração, atraso (\textit{delay}) e temporização de \textit{keyframes} \cite{edge-animations}.
 
 \subsection{Alterações}
 \begin{figure}[!htb]
@@ -121,10 +121,10 @@ interativa de parâmetros como duração, atraso (\textit{delay}) e temporizaç�
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-changes}
 \end{figure}
-A ferramenta \textbf{Alterações} (Changes) monitora modificações efetuadas nos arquivos-fonte (CSS, JavaScript, HTML) 
+A ferramenta \textbf{Alterações} (Changes), apresentada na figura \ref{fig:edge-changes}, monitora modificações efetuadas nos arquivos-fonte (CSS, JavaScript, HTML) 
 diretamente no ambiente de desenvolvimento. Sua função primária é apresentar um comparativo visual (\textit{diff}) que 
-detalha as discrepâncias (adições e remoções de linhas) entre o estado original do recurso e as edições locais. Isso facilita 
-a revisão das alterações antes de sua persistência no sistema de arquivos, permitindo também a reversão das modificações.
+detalha as discrepâncias (adições e remoções de linhas) entre o estado original do recurso e as edições locais \cite{edge-changes}. Isso facilita 
+a revisão das alterações antes de sua persistência no sistema de arquivos, permitindo também a reversão das modificações \cite{edge-changes}.
 
 \subsection{Cobertura}
 \begin{figure}[!htb]
@@ -134,11 +134,11 @@ a revisão das alterações antes de sua persistência no sistema de arquivos, p
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-coverage}
 \end{figure}
-O painel \textbf{Cobertura} (Coverage) é um utilitário analítico que quantifica a utilização de código JavaScript e CSS 
+O painel \textbf{Cobertura} (Coverage), exibido na figura \ref{fig:edge-coverage}, é um utilitário analítico que quantifica a utilização de código JavaScript e CSS 
 durante o carregamento e a interação com a página. A ferramenta identifica segmentos de código não executados, fornecendo 
-métricas de bytes (utilizados vs. não utilizados) e um detalhamento visual linha a linha. Esta análise é fundamental para 
+métricas de bytes (utilizados vs. não utilizados) e um detalhamento visual linha a linha \cite{edge-coverage}. Esta análise é fundamental para 
 otimizações de \textit{tree-shaking} e remoção de código morto (\textit{dead code}), visando a redução do \textit{payload} 
-da aplicação e a melhoria do tempo de carregamento.
+da aplicação e a melhoria do tempo de carregamento \cite{edge-coverage}.
 
 \subsection{Analisador de Falhas}
 \begin{figure}[!htb]
@@ -148,11 +148,11 @@ da aplicação e a melhoria do tempo de carregamento.
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-crash-analyzer}
 \end{figure}
-O \textbf{Analisador de Falhas} (Crash Analyzer) é um utilitário de diagnóstico pós-morte concebido para analisar falhas de 
+O \textbf{Analisador de Falhas} (Crash Analyzer), ilustrado na figura \ref{fig:edge-crash-analyzer}, é um utilitário de diagnóstico pós-morte concebido para analisar falhas de 
 aplicações em produção. Sua principal função é processar \textit{stack traces} (pilhas de chamadas) de JavaScript minificados, 
-que são frequentemente ofuscados. Ao aplicar os \textit{source maps} correspondentes, a ferramenta reverte o código ao seu 
+que são frequentemente ofuscados \cite{edge-crash-analyzer}. Ao aplicar os \textit{source maps} correspondentes, a ferramenta reverte o código ao seu 
 estado original não minificado, permitindo a identificação da causa raiz da falha ao mapear o erro de volta aos nomes de funções 
-e linhas de código legíveis.
+e linhas de código legíveis \cite{edge-crash-analyzer}.
 
 \subsection{Descrição Geral de CSS}
 \begin{figure}[!htb]
@@ -162,17 +162,18 @@ e linhas de código legíveis.
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-css-overview}
 \end{figure}
-A ferramenta \textbf{Descrição Geral de CSS} (CSS Overview) realiza uma auditoria estática do CSS de uma página. Ela captura 
-um instantâneo do estado do CSS e gera um relatório que cataloga o uso de cores, tipografia (\textit{fonts}) e 
-\textit{media queries}. A ferramenta é projetada para identificar inconsistências no design system, como cores duplicadas ou 
-estilos de fonte não padronizados, e destaca problemas de acessibilidade, notadamente questões de contraste de cor insuficientes.
+A ferramenta \textbf{Descrição Geral de CSS} (CSS Overview), apresentada na figura \ref{fig:edge-css-overview}, 
+realiza uma auditoria estática do CSS de uma página. Ela captura um instantâneo do estado do CSS e gera um relatório 
+que cataloga o uso de cores, tipografia (\textit{fonts}) e \textit{media queries} \cite{edge-css-overview}. A ferramenta 
+é projetada para identificar inconsistências no design system, como cores duplicadas ou estilos de fonte não padronizados, 
+e destaca problemas de acessibilidade, notadamente questões de contraste de cor insuficientes \cite{edge-css-overview}.
 
 \subsection{Problemas}
 O painel \textbf{Problemas} (Issues) funciona como um agregador proativo de diagnósticos. Ele analisa continuamente a página e 
 consolida problemas detectados em categorias como acessibilidade, compatibilidade entre navegadores 
-(\textit{cross-browser compatibility}), desempenho, segurança e conformidade com PWA. A ferramenta fornece descrições 
+(\textit{cross-browser compatibility}), desempenho, segurança e conformidade com PWA \cite{edge-issues}. A ferramenta fornece descrições 
 contextuais de cada problema e links diretos para a documentação ou para o recurso afetado, centralizando o feedback de 
-múltiplas fontes de auditoria.
+múltiplas fontes de auditoria \cite{edge-issues}.
 
 \subsection{Farol}
 \begin{figure}[!htb]
@@ -182,10 +183,10 @@ múltiplas fontes de auditoria.
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-lighthouse}
 \end{figure}
-A ferramenta \textbf{Lighthouse} (anteriormente "Audits") é um utilitário de auditoria automatizada para a avaliação da 
+A ferramenta \textbf{Lighthouse} (anteriormente "Audits"), exibida na figura \ref{fig:edge-lighthouse}, é um utilitário de auditoria automatizada para a avaliação da 
 qualidade de páginas web. Ela executa uma série de testes e gera relatórios de diagnóstico abrangentes, pontuando a página em 
-métricas de Desempenho, Acessibilidade, Melhores Práticas, SEO e Progressive Web App (PWA). Os relatórios fornecem uma linha de 
-base quantificável e recomendações acionáveis para a otimização de cada uma dessas categorias.
+métricas de Desempenho, Acessibilidade, Melhores Práticas, SEO e Progressive Web App (PWA) \cite{edge-lighthouse}. Os relatórios fornecem uma linha de 
+base quantificável e recomendações acionáveis para a otimização de cada uma dessas categorias \cite{edge-lighthouse}.
 
 \subsection{Mídia}
 \begin{figure}[!htb]
@@ -195,10 +196,10 @@ base quantificável e recomendações acionáveis para a otimização de cada um
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-media}
 \end{figure}
-O painel \textbf{Mídia} (Media) é um utilitário de depuração específico para a inspeção de reprodutores de mídia 
+O painel \textbf{Mídia} (Media), apresentado na figura \ref{fig:edge-media}, é um utilitário de depuração específico para a inspeção de reprodutores de mídia 
 (\texttt{<video>} e \texttt{<audio>}) em uma página. A ferramenta monitora e exibe propriedades do reprodutor, eventos do ciclo 
-de vida da mídia (ex: \textit{play}, \textit{pause}, \textit{seek}) e mensagens de log. Facilita a depuração de problemas de 
-reprodução, \textit{buffering} e eventos de mídia.
+de vida da mídia (ex: \textit{play}, \textit{pause}, \textit{seek}) e mensagens de log \cite{edge-media}. Facilita a depuração de problemas de 
+reprodução, \textit{buffering} e eventos de mídia \cite{edge-media}.
 
 \subsection{Inspetor de Memória}
 \begin{figure}[!htb]
@@ -208,11 +209,11 @@ reprodução, \textit{buffering} e eventos de mídia.
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-memory-inspector}
 \end{figure}
-O \textbf{Inspetor de Memória} (Memory Inspector) é um utilitário para a inspeção de baixo nível de buffers de memória binária. 
-Ele é projetado para analisar \textit{ArrayBuffer}, \textit{TypedArray}, \textit{DataView} e, crucialmente, a memória linear 
-de WebAssembly (Wasm). A ferramenta exibe os bytes brutos em formato hexadecimal, uma representação ASCII adjacente e um 
+O \textbf{Inspetor de Memória} (Memory Inspector), ilustrado na figura \ref{fig:edge-memory-inspector}, é um utilitário para a 
+inspeção de baixo nível de buffers de memória binária. Ele é projetado para analisar \textit{ArrayBuffer}, \textit{TypedArray}, \textit{DataView} e, crucialmente, a memória linear 
+de WebAssembly (Wasm) \cite{edge-memory-inspector}. A ferramenta exibe os bytes brutos em formato hexadecimal, uma representação ASCII adjacente e um 
 inspetor de valores que interpreta os dados em múltiplos formatos (ex: inteiros de 32 bits, \textit{floats}), suportando a 
-alternância entre \textit{big-endian} e \textit{little-endian}.
+alternância entre \textit{big-endian} e \textit{little-endian} \cite{edge-memory-inspector}.
 
 \subsection{Condições de Rede}
 \begin{figure}[!htb]
@@ -222,11 +223,11 @@ alternância entre \textit{big-endian} e \textit{little-endian}.
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-network-conditions}
 \end{figure}
-A ferramenta \textbf{Condições de Rede} (Network Conditions) é um utilitário de simulação de ambiente. Suas funções primárias 
+A ferramenta \textbf{Condições de Rede} (Network Conditions), apresentada na figura \ref{fig:edge-network-conditions}, é um utilitário de simulação de ambiente. Suas funções primárias 
 incluem a desativação do cache do navegador, a aplicação de limitação de banda (\textit{throttling}) para emular diferentes 
 velocidades de conexão (ex: 3G lento) e a capacidade de sobrescrever a \textit{string} de agente do usuário 
-(\textit{user agent}). Adicionalmente, permite a configuração das codificações de conteúdo (Content-Encodings) aceitas para 
-testar o processamento de respostas comprimidas.
+(\textit{user agent}) \cite{edge-network-conditions}. Adicionalmente, permite a configuração das codificações de conteúdo (Content-Encodings) aceitas para 
+testar o processamento de respostas comprimidas \cite{edge-network-conditions}.
 
 \subsection{Console de Rede}
 \begin{figure}[!htb]
@@ -236,10 +237,10 @@ testar o processamento de respostas comprimidas.
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-network-console}
 \end{figure}
-O \textbf{Console de Rede} (Network Console) é um cliente de API integrado, projetado para a composição, envio e teste de 
+O \textbf{Console de Rede} (Network Console), exibido na figura \ref{fig:edge-network-console}, é um cliente de API integrado, projetado para a composição, envio e teste de 
 solicitações HTTP. Permite a configuração detalhada de requisições, especificando o método (GET, POST, etc.), URL, cabeçalhos 
-e corpo da solicitação. É usado primariamente para a depuração de APIs Web (REST/OpenAPI) e é compatível com a importação e 
-exportação de coleções (ex: formato Postman).
+e corpo da solicitação \cite{edge-network-console}. É usado primariamente para a depuração de APIs Web (REST/OpenAPI) e é compatível com a importação e 
+exportação de coleções (ex: formato Postman) \cite{edge-network-console}.
 
 \subsection{Bloqueio de Solicitações de Rede}
 \begin{figure}[!htb]
@@ -249,10 +250,10 @@ exportação de coleções (ex: formato Postman).
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-network-request-blocking}
 \end{figure}
-Este utilitário permite a simulação de falhas de rede ao bloquear o carregamento de recursos específicos. Os desenvolvedores 
+Este utilitário, apresentado na figura \ref{fig:edge-network-request-blocking}, permite a simulação de falhas de rede ao bloquear o carregamento de recursos específicos. Os desenvolvedores 
 podem definir padrões (incluindo \textit{wildcards}) para impedir que solicitações de rede para URLs, domínios ou tipos de 
-arquivos específicos sejam concluídas. Esta funcionalidade é essencial para testar a resiliência da aplicação, o comportamento 
-de \textit{fallback} e a renderização da página em cenários de indisponibilidade de recursos críticos.
+arquivos específicos sejam concluídas \cite{edge-network-blocking}. Esta funcionalidade é essencial para testar a resiliência da aplicação, o comportamento 
+de \textit{fallback} e a renderização da página em cenários de indisponibilidade de recursos críticos \cite{edge-network-blocking}.
 
 \subsection{Monitoramento de Desempenho}
 \begin{figure}[!htb]
@@ -262,10 +263,10 @@ de \textit{fallback} e a renderização da página em cenários de indisponibili
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-performance-monitor}
 \end{figure}
-O \textbf{Monitoramento de Desempenho} (Performance Monitor) oferece uma visualização em tempo real de métricas de desempenho 
+O \textbf{Monitoramento de Desempenho} (Performance Monitor), ilustrado na figura \ref{fig:edge-performance-monitor}, oferece uma visualização em tempo real de métricas de desempenho 
 de tempo de execução. Diferente do perfilamento detalhado do painel "Desempenho", este monitor exibe gráficos contínuos de 
 indicadores-chave, como uso da CPU, tamanho do \textit{heap} de JavaScript, contagem de nós DOM e a frequência de recálculos de 
-layout e estilo por segundo, auxiliando na identificação de consumo excessivo de recursos.
+layout e estilo por segundo, auxiliando na identificação de consumo excessivo de recursos \cite{edge-performance-monitor}.
 
 \subsection{Gravador}
 \begin{figure}[!htb]
@@ -275,10 +276,10 @@ layout e estilo por segundo, auxiliando na identificação de consumo excessivo 
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-recorder}
 \end{figure}
-A ferramenta \textbf{Gravador} (Recorder) permite a captura e reprodução de fluxos de interação do usuário. Ela registra 
-ações como cliques, entradas de teclado e eventos de navegação, permitindo que a sequência seja executada automaticamente. 
+A ferramenta \textbf{Gravador} (Recorder), apresentado na figura \ref{fig:edge-recorder}, permite a captura e reprodução de fluxos de interação do usuário. Ela registra 
+ações como cliques, entradas de teclado e eventos de navegação, permitindo que a sequência seja executada automaticamente \cite{edge-recorder}. 
 Este utilitário é usado para automatizar testes de regressão, analisar fluxos de usuário complexos e medir o desempenho de 
-tempo de execução durante a reprodução do fluxo, identificando gargalos de performance em interações específicas.
+tempo de execução durante a reprodução do fluxo, identificando gargalos de performance em interações específicas \cite{edge-recorder}.
 
 \subsection{Renderização}
 \begin{figure}[!htb]
@@ -288,16 +289,16 @@ tempo de execução durante a reprodução do fluxo, identificando gargalos de p
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-rendering}
 \end{figure}
-O painel \textbf{Renderização} (Rendering) é um conjunto de utilitários de diagnóstico focados na visualização da saída do 
+O painel \textbf{Renderização} (Rendering), exibido na figura \ref{fig:edge-rendering}, é um conjunto de utilitários de diagnóstico focados na visualização da saída do 
 motor de renderização. Suas funcionalidades incluem a emulação de recursos de mídia CSS (como \texttt{prefers-color-scheme} 
 e modo de impressão), a simulação de deficiências visuais (ex: daltonismo, visão turva) e a ativação de sobreposições de 
-depuração (ex: \textit{paint flashing}, \textit{layout shift regions}).
+depuração (ex: \textit{paint flashing}, \textit{layout shift regions}) \cite{edge-rendering}.
 
 \subsection{Pesquisa}
-A ferramenta \textbf{Pesquisa} (Search) oferece uma funcionalidade de busca global que abrange todos os arquivos de recursos 
+A ferramenta \textbf{Pesquisa} (Search), ilustrada na figura \ref{fig:edge-search}, oferece uma funcionalidade de busca global que abrange todos os arquivos de recursos 
 carregados pela página (HTML, CSS, JS). Ela suporta a localização de sequências de texto literais e expressões regulares, com 
-opções de sensibilidade a maiúsculas e minúsculas. Os resultados são listados por arquivo, e a seleção de um resultado direciona 
-o usuário para a linha correspondente no painel "Fontes".
+opções de sensibilidade a maiúsculas e minúsculas \cite{edge-search}. Os resultados são listados por arquivo, e a seleção de um resultado direciona 
+o usuário para a linha correspondente no painel "Fontes" \cite{edge-search}.
 
 \subsection{Segurança}
 \begin{figure}[!htb]
@@ -307,10 +308,10 @@ o usuário para a linha correspondente no painel "Fontes".
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-security}
 \end{figure}
-O painel \textbf{Segurança} (Security) analisa o status de segurança da conexão de uma página. Ele verifica a validade do 
+O painel \textbf{Segurança} (Security), apresentado na figura \ref{fig:edge-security}, analisa o status de segurança da conexão de uma página. Ele verifica a validade do 
 certificado HTTPS da origem principal e identifica a ocorrência de "conteúdo misto" (\textit{mixed content}), que ocorre quando 
-uma página segura (HTTPS) carrega sub-recursos (como imagens ou scripts) de origens inseguras (HTTP). A ferramenta detalha o 
-status do certificado e da conexão para cada origem.
+uma página segura (HTTPS) carrega sub-recursos (como imagens ou scripts) de origens inseguras (HTTP) \cite{edge-security}. A ferramenta detalha o 
+status do certificado e da conexão para cada origem \cite{edge-security}.
 
 \subsection{Sensores}
 \begin{figure}[!htb]
@@ -320,10 +321,10 @@ status do certificado e da conexão para cada origem.
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-sensors}
 \end{figure}
-A ferramenta \textbf{Sensores} (Sensors) é um utilitário de emulação de hardware e estados do sistema. Ela permite sobrescrever 
+A ferramenta \textbf{Sensores} (Sensors), exibida na figura \ref{fig:edge-sensors}, é um utilitário de emulação de hardware e estados do sistema. Ela permite sobrescrever 
 a geolocalização (latitude/longitude), simular a orientação física do dispositivo (dados de acelerômetro e giroscópio) e forçar 
-eventos de toque. Capacidades mais recentes incluem a emulação de estados do \textit{Idle Detector}, a simulação da concorrência 
-de hardware (\texttt{navigator.hardwareConcurrency}) e a emulação da pressão da CPU.
+eventos de toque \cite{edge-sensors}. Capacidades mais recentes incluem a emulação de estados do \textit{Idle Detector}, a simulação da concorrência 
+de hardware (\texttt{navigator.hardwareConcurrency}) e a emulação da pressão da CPU \cite{edge-sensors}.
 
 \subsection{Monitor de Mapas de Origem}
 \begin{figure}[!htb]
@@ -333,10 +334,10 @@ de hardware (\texttt{navigator.hardwareConcurrency}) e a emulação da pressão 
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-sourcemap-monitor}
 \end{figure}
-Este painel monitora especificamente a requisição e o status de carregamento de mapas de origem (\textit{source maps}). Ele 
-fornece um log de quais arquivos \textit{source map} foram solicitados, se foram carregados com sucesso ou se falharam. É um 
+Este painel, apresentado na figura \ref{fig:edge-sourcemap-monitor}, monitora especificamente a requisição e o status de carregamento de mapas de origem (\textit{source maps}). Ele 
+fornece um log de quais arquivos \textit{source map} foram solicitados, se foram carregados com sucesso ou se falharam \cite{edge-sourcemap-monitor}. É um 
 utilitário de diagnóstico crucial para garantir que a depuração de código minificado ou transpilado (como TypeScript) funcione 
-corretamente, mapeando o código executado de volta ao código-fonte original.
+corretamente, mapeando o código executado de volta ao código-fonte original \cite{edge-sourcemap-monitor}.
 
 \subsection{WebAuthn}
 \begin{figure}[!htb]
@@ -346,10 +347,10 @@ corretamente, mapeando o código executado de volta ao código-fonte original.
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-webauthn}
 \end{figure}
-A ferramenta \textbf{WebAuthn} é um utilitário de depuração para a API de Autenticação da Web. Ela permite a criação e 
+A ferramenta \textbf{WebAuthn}, ilustrada na figura \ref{fig:edge-webauthn}, é um utilitário de depuração para a API de Autenticação da Web. Ela permite a criação e 
 gerenciamento de autenticadores virtuais baseados em software, eliminando a necessidade de dispositivos físicos (como chaves de 
-segurança USB) durante o desenvolvimento. O painel permite a configuração de atributos do autenticador, como protocolo (CTAP2, 
-U2F), transporte e suporte a chaves residentes.
+segurança USB) durante o desenvolvimento \cite{edge-webauthn}. O painel permite a configuração de atributos do autenticador, como protocolo (CTAP2, 
+U2F), transporte e suporte a chaves residentes \cite{edge-webauthn}.
 
 \subsection{WebAudio}
 \begin{figure}[!htb]
@@ -359,7 +360,7 @@ U2F), transporte e suporte a chaves residentes.
     {\footnotesize Fonte: Microsoft Learn}
     \label{fig:edge-webaudio}
 \end{figure}
-O painel \textbf{WebAudio} é um utilitário de diagnóstico para aplicações que utilizam a API WebAudio. Ele renderiza um grafo 
-visual interativo de todos os nós de áudio (\textit{AudioNodes}) instanciados, mostrando suas conexões e estado. Esta 
+O painel \textbf{WebAudio}, apresentado na figura \ref{fig:edge-webaudio}, é um utilitário de diagnóstico para aplicações que utilizam a API WebAudio. Ele renderiza um grafo 
+visual interativo de todos os nós de áudio (\textit{AudioNodes}) instanciados, mostrando suas conexões e estado \cite{edge-webaudio}. Esta 
 visualização é essencial para depurar o fluxo de processamento de áudio, inspecionar os parâmetros dos nós e monitorar o 
-\textit{AudioContext} em tempo real.
+\textit{AudioContext} em tempo real \cite{edge-webaudio}.

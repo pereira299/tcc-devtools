@@ -40,6 +40,7 @@
 *.vrb
 *.xdy
 *.xml
+*.mw
 *blx.bib
 .bak 
 .mtc

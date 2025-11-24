@@ -19,6 +19,7 @@
 
 % INCLUI ARQUIVOS DE CONFIGURAÇÕES-------------------------------------------------------------------------------
 %\usepackage[utf8]{inputenc}
+
 \input{config/packages}
 \input{config/pdf}
 
@@ -26,7 +27,7 @@
 \providecommand{\thedate}{\today}
 
 \begin{document}
-
+\input{config/variaveis}
 % INCLUI ARQUIVOS DA PROPOSTA DE TRABALHO DE CONCLUSÃO DE CURSO (PRÉ-TEXTUAIS, TEXTUAIS, PÓS-TEXTUAIS)------------
 
 % INSERE CAPA E FOLHA DE ROSTO
@@ -37,8 +38,27 @@
 % \pretextual
 \imprimircapa % Comando para imprimir Capa
 \imprimirfolhaderosto % Comando para imprimir Folha de rosto
+%% Folha de aprovação
+\approvalpage
+%% Agradecimentos
+\include{src/pre-textuais/agradecimentos}
+%% Epígrafe
+\include{src/pre-textuais/epigrafe}
 \include{src/pre-textuais/resumo}
 \include{src/pre-textuais/abstract}
+%% Lista de ilustrações
+\include{src/pre-textuais/lista-figuras}
+%% Lista de tabelas
+\include{src/pre-textuais/lista-tabelas}
+%% Lista de abreviaturas, siglas e acrônimos
+\include{src/pre-textuais/lista-acronimos}
+
+\include{src/pre-textuais/sumario}
+\newpage
+
+%% Sumário
+%%\incluirsumario
+
 \textual % INSERE ELEMENTOS TEXTUAIS
 \include{src/textuais/introducao}
 \include{src/textuais/objetivos}
@@ -47,8 +67,9 @@
 \include{src/textuais/metodologia}
 \include{src/textuais/pesquisa}
 \include{src/textuais/lista-ferramentas}
-\include{src/textuais/tabela-ferramentas}
+\input{src/textuais/tabela-ferramentas}
 \include{src/textuais/resultados}
+\include{src/textuais/conclusão}
 
 \postextual
 % INSERE ELEMENTOS PÓS-TEXTUAIS
