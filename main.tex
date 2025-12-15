@@ -39,7 +39,7 @@
 \imprimircapa % Comando para imprimir Capa
 \imprimirfolhaderosto % Comando para imprimir Folha de rosto
 %% Folha de aprovação
-\approvalpage
+% \approvalpage
 %% Agradecimentos
 \include{src/pre-textuais/agradecimentos}
 %% Epígrafe
@@ -60,12 +60,11 @@
 %%\incluirsumario
 
 \textual % INSERE ELEMENTOS TEXTUAIS
-\include{src/textuais/introducao}
-\include{src/textuais/objetivos}
-\include{src/textuais/justificativa}
-\include{src/textuais/materiais}
-\include{src/textuais/metodologia}
-\include{src/textuais/pesquisa}
+\input{src/textuais/introducao}
+\input{src/textuais/objetivos}
+\input{src/textuais/justificativa}
+\input{src/textuais/materiais}
+\input{src/textuais/metodologia}
 \include{src/textuais/lista-ferramentas}
 \input{src/textuais/tabela-ferramentas}
 \include{src/textuais/resultados}

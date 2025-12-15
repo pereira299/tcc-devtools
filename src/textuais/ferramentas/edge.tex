@@ -1,6 +1,5 @@
 \section{Microsoft Edge}
 
-\subsection{Elementos}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Elementos" do Microsoft Edge Devtools}
@@ -14,7 +13,6 @@ DOM, refletindo o estado dinâmico da aplicação, que pode divergir do HTML fon
 A ferramenta facilita a depuração de layout através da edição direta de atributos HTML, conteúdo textual e propriedades CSS, 
 permitindo ainda a simulação de pseudo-estados (ex: \textit{:hover}) e a análise do modelo de caixa (box model) \cite{edge-elements}.
 
-\subsection{Console}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Console" do Microsoft Edge Devtools}
@@ -28,7 +26,6 @@ JavaScript. Sua função primária é o diagnóstico de tempo de execução, ser
 com o contexto da página, viabilizando a inspeção e manipulação programática do DOM e do objeto \textit{Window}, além do 
 teste de expressões e a utilização de funções utilitárias de depuração \cite{edge-console}.
 
-\subsection{Fontes}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Fontes" do Microsoft Edge Devtools}
@@ -42,7 +39,6 @@ de scripts e a utilização de um depurador de JavaScript \cite{edge-sources}. E
 de pontos de interrupção (\textit{breakpoints}), a execução passo a passo (\textit{step-through}) do código, a inspeção 
 da pilha de chamadas (\textit{call stack}) e a monitorização de variáveis em escopo \cite{edge-sources}.
 
-\subsection{Rede}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Rede" do Microsoft Edge Devtools}
@@ -57,7 +53,6 @@ e temporização (através de um gráfico de \textit{Waterfall}), sendo crucial 
 falhas de requisição e otimização de \textit{payloads} \cite{edge-network}. Permite ainda a simulação de condições de rede adversas 
 (\textit{throttling}) \cite{edge-network}.
 
-\subsection{Desempenho}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Desempenho" do Microsoft Edge Devtools}
@@ -72,7 +67,6 @@ principal, incluindo a execução de JavaScript, operações de renderização (
 interação \cite{edge-performance}. A análise deste traço permite a identificação precisa de gargalos de CPU e operações de longa duração que afetam a 
 responsividade da aplicação .
 
-\subsection{Aplicação}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Aplicação" do Microsoft Edge Devtools}
@@ -86,7 +80,6 @@ Session Storage, IndexedDB, Cookies e Cache Storage \cite{edge-application}. Adi
 Web Apps (PWAs), oferecendo controle sobre o ciclo de vida dos \textit{Service Workers}, a validação do Manifesto da Aplicação 
 e a inspeção de serviços em segundo plano (\textit{Background Services}) \cite{edge-application}.
 
-\subsection{Exibição 3D}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Exibição 3D" do Microsoft Edge Devtools}
@@ -100,7 +93,6 @@ Ao modelar a página em um espaço tridimensional, a ferramenta facilita a ident
 de renderização \cite{edge-3d-view}. A ferramenta segmenta a visualização em abas dedicadas para Camadas Compostas, Z-index e DOM, auxiliando na 
 compreensão da estrutura de renderização \cite{edge-3d-view}.
 
-\subsection{Animações}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Animações" do Microsoft Edge Devtools}
@@ -113,7 +105,6 @@ A ferramenta captura sequências de animação (CSS Animations, CSS Transitions 
 tempo de início \cite{edge-animations}. Permite a desaceleração, repetição e análise do código-fonte das animações, além de possibilitar a modificação 
 interativa de parâmetros como duração, atraso (\textit{delay}) e temporização de \textit{keyframes} \cite{edge-animations}.
 
-\subsection{Alterações}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Alterações" do Microsoft Edge Devtools}
@@ -126,7 +117,6 @@ diretamente no ambiente de desenvolvimento. Sua função primária é apresentar
 detalha as discrepâncias (adições e remoções de linhas) entre o estado original do recurso e as edições locais \cite{edge-changes}. Isso facilita 
 a revisão das alterações antes de sua persistência no sistema de arquivos, permitindo também a reversão das modificações \cite{edge-changes}.
 
-\subsection{Cobertura}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Cobertura" do Microsoft Edge Devtools}
@@ -140,7 +130,6 @@ métricas de bytes (utilizados vs. não utilizados) e um detalhamento visual lin
 otimizações de \textit{tree-shaking} e remoção de código morto (\textit{dead code}), visando a redução do \textit{payload} 
 da aplicação e a melhoria do tempo de carregamento \cite{edge-coverage}.
 
-\subsection{Analisador de Falhas}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Analisador de Falhas" do Microsoft Edge Devtools}
@@ -154,7 +143,6 @@ que são frequentemente ofuscados \cite{edge-crash-analyzer}. Ao aplicar os \tex
 estado original não minificado, permitindo a identificação da causa raiz da falha ao mapear o erro de volta aos nomes de funções 
 e linhas de código legíveis \cite{edge-crash-analyzer}.
 
-\subsection{Descrição Geral de CSS}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Descrição Geral de CSS" do Microsoft Edge Devtools}
@@ -168,14 +156,12 @@ que cataloga o uso de cores, tipografia (\textit{fonts}) e \textit{media queries
 é projetada para identificar inconsistências no design system, como cores duplicadas ou estilos de fonte não padronizados, 
 e destaca problemas de acessibilidade, notadamente questões de contraste de cor insuficientes \cite{edge-css-overview}.
 
-\subsection{Problemas}
 O painel \textbf{Problemas} (Issues) funciona como um agregador proativo de diagnósticos. Ele analisa continuamente a página e 
 consolida problemas detectados em categorias como acessibilidade, compatibilidade entre navegadores 
 (\textit{cross-browser compatibility}), desempenho, segurança e conformidade com PWA \cite{edge-issues}. A ferramenta fornece descrições 
 contextuais de cada problema e links diretos para a documentação ou para o recurso afetado, centralizando o feedback de 
 múltiplas fontes de auditoria \cite{edge-issues}.
 
-\subsection{Farol}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Farol" do Microsoft Edge Devtools}
@@ -188,7 +174,6 @@ qualidade de páginas web. Ela executa uma série de testes e gera relatórios d
 métricas de Desempenho, Acessibilidade, Melhores Práticas, SEO e Progressive Web App (PWA) \cite{edge-lighthouse}. Os relatórios fornecem uma linha de 
 base quantificável e recomendações acionáveis para a otimização de cada uma dessas categorias \cite{edge-lighthouse}.
 
-\subsection{Mídia}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Mídia" do Microsoft Edge Devtools}
@@ -201,7 +186,6 @@ O painel \textbf{Mídia} (Media), apresentado na figura \ref{fig:edge-media}, é
 de vida da mídia (ex: \textit{play}, \textit{pause}, \textit{seek}) e mensagens de log \cite{edge-media}. Facilita a depuração de problemas de 
 reprodução, \textit{buffering} e eventos de mídia \cite{edge-media}.
 
-\subsection{Inspetor de Memória}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Inspetor de Memória" do Microsoft Edge Devtools}
@@ -215,7 +199,6 @@ de WebAssembly (Wasm) \cite{edge-memory-inspector}. A ferramenta exibe os bytes 
 inspetor de valores que interpreta os dados em múltiplos formatos (ex: inteiros de 32 bits, \textit{floats}), suportando a 
 alternância entre \textit{big-endian} e \textit{little-endian} \cite{edge-memory-inspector}.
 
-\subsection{Condições de Rede}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Condições de Rede" do Microsoft Edge Devtools}
@@ -229,7 +212,6 @@ velocidades de conexão (ex: 3G lento) e a capacidade de sobrescrever a \textit{
 (\textit{user agent}) \cite{edge-network-conditions}. Adicionalmente, permite a configuração das codificações de conteúdo (Content-Encodings) aceitas para 
 testar o processamento de respostas comprimidas \cite{edge-network-conditions}.
 
-\subsection{Console de Rede}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Console de Rede" do Microsoft Edge Devtools}
@@ -242,7 +224,6 @@ solicitações HTTP. Permite a configuração detalhada de requisições, especi
 e corpo da solicitação \cite{edge-network-console}. É usado primariamente para a depuração de APIs Web (REST/OpenAPI) e é compatível com a importação e 
 exportação de coleções (ex: formato Postman) \cite{edge-network-console}.
 
-\subsection{Bloqueio de Solicitações de Rede}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Bloqueio de Solicitações de Rede" do Microsoft Edge Devtools}
@@ -255,7 +236,6 @@ podem definir padrões (incluindo \textit{wildcards}) para impedir que solicita�
 arquivos específicos sejam concluídas \cite{edge-network-blocking}. Esta funcionalidade é essencial para testar a resiliência da aplicação, o comportamento 
 de \textit{fallback} e a renderização da página em cenários de indisponibilidade de recursos críticos \cite{edge-network-blocking}.
 
-\subsection{Monitoramento de Desempenho}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Monitoramento de Desempenho" do Microsoft Edge Devtools}
@@ -268,7 +248,6 @@ de tempo de execução. Diferente do perfilamento detalhado do painel "Desempenh
 indicadores-chave, como uso da CPU, tamanho do \textit{heap} de JavaScript, contagem de nós DOM e a frequência de recálculos de 
 layout e estilo por segundo, auxiliando na identificação de consumo excessivo de recursos \cite{edge-performance-monitor}.
 
-\subsection{Gravador}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Gravador" do Microsoft Edge Devtools}
@@ -281,7 +260,6 @@ ações como cliques, entradas de teclado e eventos de navegação, permitindo q
 Este utilitário é usado para automatizar testes de regressão, analisar fluxos de usuário complexos e medir o desempenho de 
 tempo de execução durante a reprodução do fluxo, identificando gargalos de performance em interações específicas \cite{edge-recorder}.
 
-\subsection{Renderização}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Renderização" do Microsoft Edge Devtools}
@@ -294,13 +272,11 @@ motor de renderização. Suas funcionalidades incluem a emulação de recursos d
 e modo de impressão), a simulação de deficiências visuais (ex: daltonismo, visão turva) e a ativação de sobreposições de 
 depuração (ex: \textit{paint flashing}, \textit{layout shift regions}) \cite{edge-rendering}.
 
-\subsection{Pesquisa}
 A ferramenta \textbf{Pesquisa} (Search), ilustrada na figura \ref{fig:edge-search}, oferece uma funcionalidade de busca global que abrange todos os arquivos de recursos 
 carregados pela página (HTML, CSS, JS). Ela suporta a localização de sequências de texto literais e expressões regulares, com 
 opções de sensibilidade a maiúsculas e minúsculas \cite{edge-search}. Os resultados são listados por arquivo, e a seleção de um resultado direciona 
 o usuário para a linha correspondente no painel "Fontes" \cite{edge-search}.
 
-\subsection{Segurança}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Segurança" do Microsoft Edge Devtools}
@@ -313,7 +289,6 @@ certificado HTTPS da origem principal e identifica a ocorrência de "conteúdo m
 uma página segura (HTTPS) carrega sub-recursos (como imagens ou scripts) de origens inseguras (HTTP) \cite{edge-security}. A ferramenta detalha o 
 status do certificado e da conexão para cada origem \cite{edge-security}.
 
-\subsection{Sensores}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Sensores" do Microsoft Edge Devtools}
@@ -326,7 +301,6 @@ a geolocalização (latitude/longitude), simular a orientação física do dispo
 eventos de toque \cite{edge-sensors}. Capacidades mais recentes incluem a emulação de estados do \textit{Idle Detector}, a simulação da concorrência 
 de hardware (\texttt{navigator.hardwareConcurrency}) e a emulação da pressão da CPU \cite{edge-sensors}.
 
-\subsection{Monitor de Mapas de Origem}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Monitor de Mapas de Origem" do Microsoft Edge Devtools}
@@ -339,7 +313,6 @@ fornece um log de quais arquivos \textit{source map} foram solicitados, se foram
 utilitário de diagnóstico crucial para garantir que a depuração de código minificado ou transpilado (como TypeScript) funcione 
 corretamente, mapeando o código executado de volta ao código-fonte original \cite{edge-sourcemap-monitor}.
 
-\subsection{WebAuthn}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "WebAuthn" do Microsoft Edge Devtools}
@@ -352,7 +325,6 @@ gerenciamento de autenticadores virtuais baseados em software, eliminando a nece
 segurança USB) durante o desenvolvimento \cite{edge-webauthn}. O painel permite a configuração de atributos do autenticador, como protocolo (CTAP2, 
 U2F), transporte e suporte a chaves residentes \cite{edge-webauthn}.
 
-\subsection{WebAudio}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "WebAudio" do Microsoft Edge Devtools}

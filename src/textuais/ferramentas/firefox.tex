@@ -1,7 +1,6 @@
 \section{Mozilla Firefox}
 O navegador Mozilla Firefox integra um conjunto abrangente de ferramentas de desenvolvimento web, centralizadas na interface denominada "Toolbox" (Caixa de Ferramentas). Esta suíte é projetada para permitir que desenvolvedores inspecionem, depurem, monitorem e modifiquem aplicações web diretamente no navegador. A "Toolbox" agrupa a maioria das ferramentas de desenvolvedor incorporadas e pode ser acessada através do menu de contexto (Inspecionar), do menu principal do navegador ou por atalhos de teclado. As subseções seguintes detalham os componentes individuais desta suíte de ferramentas.
 
-\subsection{Inspetor}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Inspetor" do Firefox Devtools}
@@ -16,7 +15,6 @@ a edição de propriedades CSS, a avaliação do modelo de caixa (box model), e 
 CSS Grid e Flexbox \cite{firefox-inspector}. Suas funcionalidades estendem-se à inspeção de manipuladores de eventos (event listeners), análise de animações, edição de fontes e seleção de cores, operando tanto em 
 instâncias locais do navegador quanto em alvos de depuração remotos.
 
-\subsection{Console}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Console" do Firefox Devtools}
@@ -31,7 +29,6 @@ informacionais explicitamente registradas pelo código JavaScript executado no c
 viabiliza a interação direta com o documento, permitindo a execução de expressões JavaScript no contexto da página para fins 
 de análise e manipulação dinâmica.
 
-\subsection{Depurador}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Depurador" do Firefox Devtools}
@@ -46,7 +43,6 @@ executado localmente no Firefox ou em alvos remotos, como o Firefox for Android.
 de pausar a execução em pontos específicos através de breakpoints, breakpoints condicionais, pontos de interrupção em XHR, listeners de eventos, exceções ou mutações do 
 DOM \cite{firefox-debugger}. Adicionalmente, oferece controle sobre o fluxo de execução, inspeção de valores, suporte a source maps, formatação de 
 código minificado (pretty-printing) e depuração de worker threads.
-\subsection{Rede}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Rede" do Firefox Devtools}
@@ -54,6 +50,7 @@ código minificado (pretty-printing) e depuração de worker threads.
     {\footnotesize Fonte: Firefox Source Tree Documentation}
     \label{fig:firefox-network}
 \end{figure}
+
 O Monitor de Rede (Network Monitor), exibido na figura \ref{fig:firefox-network}, é a ferramenta designada para exibir todas 
 as requisições HTTP que o Firefox executa, incluindo carregamentos de página e XMLHttpRequests. Esta funcionalidade permite 
 a análise da duração e dos detalhes de cada transação. A ferramenta registra a atividade de rede continuamente enquanto a "Toolbox" 
@@ -61,7 +58,6 @@ a análise da duração e dos detalhes de cada transação. A ferramenta registr
 Suas capacidades estendem-se à inspeção de Web Sockets, Server-Sent Events (SSE) e à simulação de diferentes condições de rede 
 (throttling) \cite{firefox-network}.
 
-\subsection{Editor de Estilo}
 O Editor de Estilo (Style Editor) é um componente das ferramentas de desenvolvedor do Firefox que faculta a inspeção e 
 manipulação das folhas de estilo (stylesheets) associadas a um documento web. A ferramenta permite a edição em tempo real do
 CSS existente, com alterações aplicadas imediatamente à página, bem como a criação de novos stylesheets ou a importação de 
@@ -70,7 +66,6 @@ At-rules, como @media, @supports, @layer e @container. Além disso, o Editor de 
 (mapas de origem), permitindo que desenvolvedores depurem o código-fonte original (ex: Sass, Less) em vez do CSS transpilado ou 
 minificado \cite{firefox-style-editor}.
 
-\subsection{Desempenho}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Desempenho" do Firefox Devtools}
@@ -84,7 +79,6 @@ Sua operação baseia-se na captura de um perfil de desempenho, que é subsequen
 uma aplicação web externa, para inspeção detalhada \cite{firefox-performance}. Os dados capturados permanecem armazenados 
 localmente, sendo que a ferramenta facilita o upload e compartilhamento desses perfis para análise colaborativa.
 
-\subsection{Inspetor de acessibilidade}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Inspetor de Acessibilidade" do Firefox Devtools}
@@ -98,7 +92,6 @@ das ferramentas de desenvolvedor do Firefox que fornece acesso à árvore de ace
 possibilitando a verificação de atributos, a identificação de elementos ausentes ou a avaliação de componentes que necessitem 
 de atenção para garantir a conformidade \cite{firefox-accessibility}.
 
-\subsection{Aplicações}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Aplicações" do Firefox Devtools}
@@ -110,7 +103,6 @@ O painel Aplicação (Application panel), apresentado na figura \ref{fig:firefox
 para a inspeção e depuração de aplicações web modernas, comumente designadas como Progressive Web Apps (PWAs) \cite{firefox-application}. Suas capacidades 
 incluem especificamente a inspeção de service workers e de manifestos de aplicações web (web app manifests) \cite{firefox-application}.
 
-\subsection{Memória}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Memória" do Firefox Devtools}
@@ -127,7 +119,6 @@ objetos, definido como o tamanho do próprio objeto acrescido do tamanho de outr
 referências \cite{firefox-memory}. Adicionalmente, a ferramenta suporta a comparação entre múltiplos instantâneos e o registro de pilhas de chamadas 
 (call stacks) para rastrear a origem das alocações.
 
-\subsection{Inspetor de armazenamento}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Inspetor de Armazenamento" do Firefox Devtools}
@@ -141,7 +132,6 @@ Cache API), Cookies (criados pela página ou por iframes nela contidos), bancos 
 e os itens neles armazenados), Local Storage e Session Storage \cite{firefox-storage}. A interface organiza os objetos de armazenamento hierarquicamente 
 por origem e, no presente momento, fornece uma visualização estritamente de leitura (read-only) dos dados armazenados \cite{firefox-storage}.
 
-\subsection{Visualizador de Propriedades DOM}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Visualizador de Propriedades DOM" do Firefox Devtools}
@@ -155,7 +145,6 @@ inspeção a partir do objeto window global da página corrente ou de um iframe 
 propriedade e seu valor correspondente, indicando visualmente propriedades não graváveis (non-writable) e permitindo a filtragem 
 da lista para localizar itens específicos \cite{firefox-dom}. A exibição pode ser atualizada manualmente para refletir alterações no DOM.
 
-\subsection{Conta-gotas}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Conta-gotas" do Firefox Devtools}
@@ -170,7 +159,6 @@ visualização de Regras (Rules view) do Inspetor \cite{firefox-eyedropper}. Est
 picker) da visualização de Regras, onde a ativação do ícone do conta-gotas permite que a cor selecionada na página atualize a 
 propriedade CSS correspondente \cite{firefox-eyedropper}.
 
-\subsection{Captura de Tela}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Captura de Tela" do Firefox Devtools}
@@ -186,7 +174,6 @@ de atrasos (delay), a especificação de um seletor CSS para o alvo, a alteraç�
 nomeação do arquivo de saída. Por padrão, as imagens são salvas no diretório de "Downloads", podendo alternativamente ser 
 copiadas para a área de transferência \cite{firefox-screenshot}.
 
-\subsection{Régua}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Régua" do Firefox Devtools}
@@ -199,7 +186,6 @@ diretamente sobre a página web renderizada \cite{firefox-rulers}. As unidades d
 dimensões atuais do viewport (área de visualização) próximo ao canto superior direito. Esta funcionalidade não é persistente, 
 exigindo que o comando seja reativado após cada atualização da página ou navegação \cite{firefox-rulers}.
 
-\subsection{Formatadores personalizados}
 Os Formatadores Personalizados (Custom Formatters), ilustrado na figura \ref{fig:firefox-custom-formatters}, são uma funcionalidade que permite a um website controlar a renderização de 
 variáveis JavaScript dentro do Console Web e do Depurador, visando aprimorar o processo de depuração ao fornecer uma 
 representação mais intuitiva de objetos complexos \cite{firefox-custom-formatters}. A implementação é realizada através da definição de um array global 
@@ -207,7 +193,6 @@ denominado devtoolsFormatters, cujos elementos são objetos formatadores. Cada f
 opcionalmente, funções hasBody e body \cite{firefox-custom-formatters}. Essas funções retornam null ou um array baseado no padrão JsonML para construir a 
 interface HTML customizada, suportando a referenciação de objetos aninhados através de um template de objeto específico.
 
-\subsection{Traçador JavaScript}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Traçador JavaScript" do Firefox Devtools}

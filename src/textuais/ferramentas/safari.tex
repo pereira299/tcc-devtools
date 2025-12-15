@@ -8,7 +8,6 @@ inspeção de dados ("Armazenamento"), análise de renderização ("Gráficos" e
 seção conclui com uma análise do "WebDriver", o framework da Apple que implementa o protocolo W3C para a automação de testes de 
 ponta a ponta.
 
-\subsection{Elementos}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Elementos" do Safari Web Inspector}
@@ -25,7 +24,6 @@ CSS, organizadas por especificidade e herança, com editores especializados; o p
 valores CSS finais aplicados e visualiza o box model; e painéis adicionais facilitam a inspeção de layout (Grid/Flexbox), 
 tipografia (incluindo fontes variáveis), e dados de acessibilidade \cite{safari-elements}.
 
-\subsection{Console}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Console" do Safari Web Inspector}
@@ -42,7 +40,6 @@ informacionais, oferecendo um fluxo de trabalho eficiente onde a seleção de um
 correspondente \cite{safari-console}. Além disso, a ferramenta oferece funcionalidades de monitoramento de rede para rastrear atividades e durações de 
 requisições e a inspeção de Event Listeners, fornecendo, assim, uma visão holística da saúde da página \cite{safari-console}.
 
-\subsection{Fontes}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Fontes" do Safari Web Inspector}
@@ -60,7 +57,6 @@ URL). Quando a execução é pausada, o inspetor exibe a Pilha de Chamadas (\emp
 assíncronas, e a Cadeia de Escopo (\emph{Scope Chain}) para análise de variáveis \cite{safari-sources}. A aba também suporta a criação de 
 \emph{Local Overrides} para substituir respostas de rede e \emph{Console Snippets}.
 
-\subsection{Rede}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Rede" do Safari Web Inspector}
@@ -77,7 +73,6 @@ fases de temporização (\emph{Timing}) da requisição. A ferramenta ainda exib
 carregamento (\emph{Load Time}) e o total de bytes transferidos, e suporta a exportação e importação de dados no formato HTTP 
 Archive (HAR) \cite{safari-network}.
 
-\subsection{Linha do tempo}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Linha do Tempo" do Safari Web Inspector}
@@ -96,7 +91,6 @@ principalmente na \enquote{Events View} (Visualização de Eventos) e na \enquot
 agrupa todas as atividades pelo frame de renderização em que ocorreram, analisando o tempo de execução de cada quadro e 
 comparando-o com os benchmarks de 30 e 60 FPS \cite{safari-timeline}.
 
-\subsection{Armazenamento}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Armazenamento" do Safari Web Inspector}
@@ -112,7 +106,6 @@ também a modificação e exclusão ativas de entradas. Essa funcionalidade é c
 dados, como conteúdo obsoleto (\emph{stale content}), gerenciamento de estados de usuário (transitórios e persistentes), e a verificação 
 de aplicações \emph{stateful} ou com capacidades offline \cite{safari}.
 
-\subsection{Gráficos}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Gráficos" do Safari Web Inspector}
@@ -128,7 +121,6 @@ de Scalable Vector Graphics (SVG) \cite{safari}. Adicionalmente, a ferramenta su
 AVIF, a modificação de atributos do \texttt{<canvas>} (ex: largura, altura), e a pré-visualização de keyframes de animações 
 (\enquote{Animation Preview}) oriundas de CSS, JavaScript ou canvas \cite{safari}. 
 
-\subsection{Camadas}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Camadas" do Safari Web Inspector}
@@ -146,7 +138,6 @@ contagem de \emph{paints} e as razões específicas que justificaram a criação
 visuais, como \enquote{Show compositing borders} (Exibir bordas de composição) e \enquote{Enable paint flashing} (Habilitar flash 
 de pintura), para identificar atividade de \emph{repaint} e os limites das camadas \cite{safari-layers}.
 
-\subsection{Auditoria}
 \begin{figure}[!htb]
     \centering
     \caption{Ferramenta "Auditoria" do Safari Web Inspector}
@@ -164,7 +155,6 @@ suportando funções de teste assíncronas que podem retornar objetos de resulta
 Notavelmente, as funções de teste recebem acesso a um objeto \texttt{WebInspectorAudit} especial, que expõe APIs para consultar 
 recursos da página e dados da árvore de acessibilidade que não são acessíveis ao JavaScript padrão \cite{safari-audit}.
 
-\subsection{WebDriver}
 O \textbf{WebDriver} para Safari fornece a implementação da Apple do protocolo W3C WebDriver, permitindo a automação de testes 
 de ponta a ponta para o conteúdo web. A arquitetura é mediada pelo executável \texttt{safaridriver}, que recebe comandos REST 
 API de bibliotecas de cliente, como o Selenium, e os encaminha para a instância do navegador \cite{safari-webdriver}. Para garantir a integridade do 
